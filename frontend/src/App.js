@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 // import Modal from "./components/Modal";
 // import MakeQuiz from "./components/quiz/makequiz";
-// import AttemptQuiz from "./components/quiz/attemptquiz";
+import AttemptQuiz from "./components/quiz/attemptquiz";
 import AutoGrade from "./components/quiz/autograde/autograde";
 import axios from "axios";
 import Header from "./components/Header";
@@ -167,8 +167,8 @@ class App extends Component {
             ) : null}
           </main> */}
         {/* <MakeQuiz></MakeQuiz> */}
-        {/* <AttemptQuiz></AttemptQuiz> */}
-        <AutoGrade></AutoGrade>
+        <AttemptQuiz></AttemptQuiz>
+        {/* <AutoGrade></AutoGrade> */}
       </>
     );
   }

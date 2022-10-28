@@ -1,8 +1,15 @@
 import React, { useState } from "react";
 import RichEditor from "./RichEditor";
 import Header from "../../Header";
-
+import { styled } from "@mui/material/styles";
 import "./autograde.css";
+
+const Div = styled("div")(({ theme }) => ({
+  ...theme.typography.button,
+  backgroundColor: "#bbb8b8",
+  padding: theme.spacing(1),
+  height: "150px",
+}));
 
 const AutoGrade = () => {
   //   let initialValue = "Hello World";
@@ -13,12 +20,16 @@ const AutoGrade = () => {
   return (
     <>
       <Header />
+
       <div>
-        <p style={{ color: "#401f68" }}>
+        <Div></Div>
+        <h1>AutoGrade Module</h1>
+        <h style={{ color: "#401f68" }}>
           <b>Write your question here</b>
-        </p>
+        </h>
+
         <RichEditor value={input} setValue={setInput} />
-        <p>
+        <p style={{ color: "#401f68" }}>
           <b>Write your Answer here</b>
         </p>
         <RichEditor value={input} setValue={setInput} />

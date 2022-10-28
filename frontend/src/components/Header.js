@@ -46,11 +46,7 @@ const Header = () => {
                   onChange={(e, value) => setValue(value)}
                   centered
                 >
-                  <Tab
-                    style={{ color: "#4e2a84" }}
-                    label="Courses"
-                    // component={makequiz}
-                  />
+                  <Tab style={{ color: "#4e2a84" }} label="Courses" />
                   {/* <Tab style={{ color: "#4e2a84" }} label="Student" /> */}
                   <Tab style={{ color: "#4e2a84" }} label="Quiz" />
                 </Tabs>

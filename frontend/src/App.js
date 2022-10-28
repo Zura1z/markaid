@@ -5,7 +5,7 @@ import AttemptQuiz from "./components/quiz/attemptquiz";
 import AutoGrade from "./components/quiz/autograde/autograde";
 import axios from "axios";
 import Header from "./components/Header";
-
+import Button from "@mui/material/Button";
 import "./App.css";
 
 class App extends Component {
@@ -167,8 +167,16 @@ class App extends Component {
             ) : null}
           </main> */}
         {/* <MakeQuiz></MakeQuiz> */}
+
+        <AutoGrade></AutoGrade>
+        <h1>Quiz Attempt Module</h1>
         <AttemptQuiz></AttemptQuiz>
-        {/* <AutoGrade></AutoGrade> */}
+        <h1>Discourse Detection</h1>
+        <a href="http://127.0.0.1:5000/discourse_home/" target="_blank">
+          <Button>
+            <p>Click Me!</p>
+          </Button>
+        </a>
       </>
     );
   }

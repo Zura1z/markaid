@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import Modal from "./components/Modal";
 // import MakeQuiz from "./components/quiz/makequiz";
 import AttemptQuiz from "./components/quiz/attemptquiz";
 import AutoGrade from "./components/quiz/autograde/autograde";
@@ -7,6 +6,7 @@ import axios from "axios";
 import Header from "./components/Header";
 import Button from "@mui/material/Button";
 import "./App.css";
+import Modal from "./components/Modal";
 
 class App extends Component {
   constructor(props) {
@@ -105,6 +105,7 @@ class App extends Component {
       <li
         key={item.id}
         className="list-group-item d-flex justify-content-between align-items-center"
+        style={{ backgroundColor: "black" }}
       >
         <span
           className={`todo-title mr-2 ${
@@ -136,41 +137,41 @@ class App extends Component {
     return (
       <>
         <Header />
-        {/* <main className="container">
-            <h1 className="text-white text-uppercase text-center my-4">
-              Todo app
-            </h1>
-            <div className="row">
-              <div className="col-md-6 col-sm-10 mx-auto p-0">
-                <div className="card p-3">
-                  <div className="mb-4">
-                    <button
-                      className="btn btn-primary"
-                      onClick={this.createItem}
-                    >
-                      Add task
-                    </button>
-                  </div>
-                  {this.renderTabList()}
-                  <ul className="list-group list-group-flush border-top-0">
-                    {this.renderItems()}
-                  </ul>
-                </div>
-              </div>
-            </div>
-            {this.state.modal ? (
-              <Modal
-                activeItem={this.state.activeItem}
-                toggle={this.toggle}
-                onSave={this.handleSubmit}
-              />
-            ) : null}
-          </main> */}
+
         {/* <MakeQuiz></MakeQuiz> */}
 
         <AutoGrade></AutoGrade>
         <h1>Quiz Attempt Module</h1>
         <AttemptQuiz></AttemptQuiz>
+
+        <h1>To do</h1>
+        <main className="container">
+          <h1 className="text-white text-uppercase text-center my-4">
+            ToDo Module
+          </h1>
+          <div className="row">
+            <div className="col-md-6 col-sm-10 mx-auto p-0">
+              <div className="card p-3">
+                <div className="mb-4">
+                  <button className="btn btn-primary" onClick={this.createItem}>
+                    Add Task
+                  </button>
+                </div>
+                {this.renderTabList()}
+                <ul className="list-group list-group-flush border-top-0">
+                  {this.renderItems()}
+                </ul>
+              </div>
+            </div>
+          </div>
+          {this.state.modal ? (
+            <Modal
+              activeItem={this.state.activeItem}
+              toggle={this.toggle}
+              onSave={this.handleSubmit}
+            />
+          ) : null}
+        </main>
         <h1>Discourse Detection</h1>
         <a href="http://127.0.0.1:5000/discourse_home/" target="_blank">
           <Button>

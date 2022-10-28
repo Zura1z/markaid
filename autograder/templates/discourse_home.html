@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+        {% block title %}Discourse Grader{% endblock %}
+        {% block head %}
+        {{ super() }}
+        {% endblock %}
+        {% block content %}
+        
+            <div class="columns " style="margin-top:20px margin-left:20px ">
+                
+                <div class="column is-two-fifths">
+                    <h1 style="font-family: 'Euclid Circular A', Arial, sans-serif; font-weight: bold; margin-left: 50px; margin-top: 90px"> Discourse <br>AutoDetector</h1>
+                    <p style="font-family: 'Euclid Circular A', Arial, sans-serif;  margin-top: 25px;  margin-left: 50px"> Auto Detection </p>
+                    
+                    <a href="/discourse/" style="text-decoration: none">
+                    <button class="button is-primary is-large modal-button" onclick="toggleModal()" aria-haspopup="true" style="font-family: 'Euclid Circular A', Arial, sans-serif; font-weight:500; font-size:20px; border-radius: 35px; margin-top: 25px; margin-left: 50px ;">
+                        Start Detecting  &nbsp<i class="fas fa-arrow-circle-up"></i></button>
+                    </a>
+                     
+                </div>
+                
+                <div class="column" align=right >
+                    <img src="{{ url_for('static', filename='document.png') }}" alt="" style="background-color: transparent;margin-top: 50px; margin-left: -25%">
+                </div>
+                
+            </div>
+            
+            <script>
+                function toggleModal(){
+                    if( document.getElementById("modal").className == "modal" ){
+                        document.getElementById("modal").className = "modal.is-active";
+                    }else{
+                        document.getElementById("modal").className = "modal"
+                    }
+                }
+            </script>
+            
+        
+        {% endblock %}
+        

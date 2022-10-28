@@ -1,0 +1,279 @@
+{% extends "base2.html" %}
+
+        {% block title %}Discourse Grader{% endblock %}
+        {% block head %}
+        {{ super() }}
+        <style>
+            .lead {
+                background-color:#a71212;
+                color: #fff;
+                font-weight:bold;
+            }
+            .position {
+                background-color:#0b1b48;
+                font-weight:bold;
+                color: #fff;
+            }
+            .evidence {
+                background-color:#006085;
+                color: #fff;
+                font-weight:bold;
+            }
+            .claim {
+                background-color:#ffc220;
+                color: #fff;
+                font-weight:bold;
+            }
+            .concluding_statement {
+                background-color:#6cace4;
+                text-decoration: underline;
+                color: #fff;
+                font-weight:bold;
+            }
+            .counterclaim {
+                background-color:#008917;
+                color: #fff;
+                font-weight:bold;
+            }
+            .rebuttal {
+                background-color:#781C68;
+                color: #fff;
+                font-weight:bold;
+            }
+            .active {
+                color: #00d1b2 ;
+            }
+            .active {
+                background-color : #00d1b2 !important;
+                color : #fff;
+            }
+
+            .wrapper {
+              /* width: 500px; */
+              background: #fff;
+              border-radius: 5px;
+              padding: 30px;
+              border:2px dashed #00d1b2 ;
+          }
+         
+          .wrapper header {
+              color: #00d1b2 ;
+              font-size: 27px;
+              font-weight: 600;
+              text-align: center;
+          }
+         
+          .wrapper form {
+              height: 167px;
+              display: flex;
+              cursor: pointer;
+              margin: 30px 0;
+              align-items: center;
+              justify-content: center;
+              flex-direction: column;
+              border-radius: 5px;
+              border: 2px dashed #a34ea1;
+          }
+         
+          form :where(i,
+          p) {
+              color: #00d1b2 ;
+          }
+         
+          form i {
+              font-size: 50px;
+          }
+         
+          form p {
+              margin-top: 15px;
+              font-size: 16px;
+          }
+         
+          section .row {
+              margin-bottom: 10px;
+              background: #E9F0FF;
+              list-style: none;
+              padding: 15px 20px;
+              border-radius: 5px;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+          }
+         
+          section .row i {
+              color: #00d1b2 ;
+              font-size: 30px;
+          }
+         
+          section .details span {
+              font-size: 14px;
+          }
+      
+          .btn {
+             
+              background-color: #00d1b2 ;
+              border: none;
+              color: white;
+              padding: 7px 40px;
+              font-size: 15px;
+              cursor: pointer;
+              border-radius: 18px;
+              display: flex;
+      
+          }
+      
+      
+          .btn i{
+              color: white;
+              margin-right: 5px;
+         
+          }
+        </style>
+        {% endblock %}
+        {% block content %}
+
+        
+        <div class="columns">
+            <div class="d-flex flex-column flex-shrink-0 bg-light column is-1" style="width: 5rem;">
+                    <a href="/">
+                  <span class=""><img style="margin-top:10px;margin-bottom:10px;margin-left:5px"  src="https://ai-werx.com/wp-content/uploads/2021/11/logo-768x432.png"></span>
+                    </a>
+                  <!--  <a href="/" class="d-block p-3 link-dark text-decoration-none" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Icon-only">
+                </a> -->
+                  
+                
+                <ul class="nav nav-pills nav-flush flex-column mb-auto text-center" style="margin-top:60px;width: 4.5rem;">
+                    
+                  <li class="nav-item">
+                    <a onclick="clickButton(1)" href="#" class="nav-link  py-3 border-bottom active" aria-current="page" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Home">
+                        <use xlink:href="#home"><i class="fas fa-file-upload"></i></use>
+                        <!-- <svg class="bi" width="24" height="24" role="img" aria-label="Home"></svg> -->
+                    </a>
+                  </li>
+                  <li >
+                    <a onclick="clickButton(2)" href="#" class="nav-link py-3 border-bottom" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Dashboard">
+                        <use xlink:href="#home"><i class="fas fa-book" ></i></use>
+                        <!-- <svg class="bi" width="24" height="24" role="img" aria-label="Home"></svg> -->                    </a>
+                  </li>
+                  <li>
+                    <a onclick="clickButton(3)" href="#" class="nav-link py-3 border-bottom" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Orders">
+                      <svg class="bi" width="24" height="24" role="img" aria-label="Orders"><use xlink:href="#table"></use></svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a onclick="clickButton(4)" href="#" class="nav-link py-3 border-bottom" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Products">
+                      <svg class="bi" width="24" height="24" role="img" aria-label="Products"><use xlink:href="#grid"></use></svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a onclick="clickButton(5)" href="#" class="nav-link py-3 border-bottom" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Customers">
+                      <svg class="bi" width="24" height="24" role="img" aria-label="Customers"><use xlink:href="#people-circle"></use></svg>
+                    </a>
+                  </li>
+                </ul>
+                
+              </div>
+        
+            <div class="column is-3">
+                <div class="file has-name is-boxed column" style="display: block;margin-top:100px"">
+                    <form method="POST" action="/labelling" enctype="multipart/form-data">
+                        <label class="file-label">
+                            
+                            
+                           
+                            <div class="wrapper">
+                              <h1>Upload TXT File</h1>
+                                  <i class="fas fa-cloud-upload-alt"></i>
+                                  <p>Browse File to Upload</p>
+                                  <input style = "margin-left:0px; margin-bottom: 10px;" type=file name=file id="fileinput">
+                                 
+                            </div>
+
+                        </label>
+                        <input type="text" name="textfield" value=" " hidden>
+                        <input type="text" name="filename" value=" " hidden>
+                        <p  >
+                          
+                          <button onclick="fetchText()" name="submit" class="btn" style = "margin-left:20px;"><i class="fa fa-upload" ></i> Upload</button>
+
+
+
+                        </p>
+                    </form>
+                  </div>
+                <ul class="menu-list is-clearfix" style = "width: 214px; display: none; margin-left:12%">
+                    <p style="margin-top: 30px"></p>
+                    <a style=" background-color: 	#a71212; color: #fff; ">Lead Statement</a>
+                    <p style="margin-bottom: 10px"></p>
+      
+                    <a style=" background-color: 	#0b1b48; color: #fff; ">Position Statement</a>
+                    <p style="margin-bottom: 10px"></p>
+      
+                    <a style=" background-color: 	#006085; color: #fff; ">Evidence Statement</a>
+                    <p style="margin-bottom: 10px"></p>
+      
+                    <a style=" background-color: 	#ffc220; color: #fff; ">Claim Statement</a>
+                    <p style="margin-bottom: 10px"></p>
+      
+                    <a style=" background-color: 	#6cace4; color: #fff; ">Concluding Statement</a>
+                    <p style="margin-bottom: 10px"></p>
+      
+                    <a style=" background-color: 	#008917; color: #fff; ">Counter Statement</a>
+                    <p style="margin-bottom: 10px"></p>
+      
+                    <a style=" background-color: 	#781C68; color: #fff; ">Rebuttal Statement</a>
+                  </li>
+                  
+                </ul>
+            
+            </div>
+            <div class="column " style="margin-top:10px; margin-right:100px">
+                <div class="card" style="width:800px;">
+                    <div class="card-content" style="width:800px;">
+                      <p></p>
+                    </div>
+            </div>
+        </div>
+        
+        
+        <script>
+            function clickButton(val){
+                for(var i = 1; i < 6; i++){
+                    document.querySelector("#content > div > div.d-flex.flex-column.flex-shrink-0.bg-light.column.is-1 > ul > li:nth-child(" + i + ") > a").className = "nav-link py-3 border-bottom";
+                }
+                document.querySelector("#content > div > div.d-flex.flex-column.flex-shrink-0.bg-light.column.is-1 > ul > li:nth-child(" + val + ") > a").className = "nav-link py-3 border-bottom active";
+                
+                if(val == 2){
+                    document.getElementsByClassName("menu-list is-clearfix")[0].style.display = "block"
+                }else{
+                    document.getElementsByClassName("menu-list is-clearfix")[0].style.display = "none"
+                }
+                if(val == 1){
+                    document.getElementsByClassName("file has-name is-boxed column")[0].style.display = "block"
+                }else{
+                    document.getElementsByClassName("file has-name is-boxed column")[0].style.display = "none"
+                }
+            }
+
+            var input = document.getElementById("fileinput"); 
+            var output = document.querySelector("#content > div > div:nth-child(3) > div > div > p");
+            
+            input.addEventListener("change", function () {
+                var filename = document.querySelector("#content > div > div.column.is-3 > div > form > input[type=text]:nth-child(3)")
+                var textfield = document.querySelector("#content > div > div.column.is-3 > div > form > input[type=text]:nth-child(2)")
+            if (this.files && this.files[0]) {
+                var myFile = this.files[0];
+                var reader = new FileReader();
+                filename.setAttribute('value', myFile.name);
+                reader.addEventListener("load", function (e) {
+                output.textContent = e.target.result;
+                textfield.setAttribute('value',e.target.result);
+                });
+                reader.readAsText(myFile);
+            }
+            });
+        </script>
+{% endblock %}
+        
+
+

@@ -12,3 +12,12 @@ class Todo(models.Model):
 
     def _str_(self):
         return self.title
+
+class Course(models.Model):
+    title = models.CharField(max_length=120)
+    description = models.TextField()
+    active = models.BooleanField(default=False)
+    noOfStudents = models.IntegerField(default=0)
+
+    def _str_(self):
+        return self.title

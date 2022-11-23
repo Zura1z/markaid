@@ -19,16 +19,16 @@ const AddCourse = () => {
         <Card
           style={{
             width: 400,
-            backgroundColor: "white",
+            backgroundColor: "purple",
           }}
         >
           <CardContent>
             
-            <Typography variant="h5" component="h2" color="textSecondary">
+            <Typography variant="h5" component="h2" color="white">
               Object Oriented Programing
             </Typography>
             
-            <Typography variant="body2" component="p" color="textSecondary">
+            <Typography variant="body2" component="p" color="white">
              BS-Sec A Fall 2022
             </Typography>
           </CardContent>

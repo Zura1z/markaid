@@ -185,8 +185,8 @@ class App extends Component {
     //   </>
     // );
     return (
-      <Navbar/>,
-      <AddCourse />
+      <Navbar></Navbar>,
+      <AddCourse/>
       
     );
     

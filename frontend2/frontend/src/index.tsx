@@ -8,6 +8,7 @@ import EssayGrading from "./components/Essay-grading/EssayGrading";
 import { Navbar } from "react-bootstrap";
 import StudentTable from "./components/Course/StudentEnrolled/CourseStudent";
 import CreateExam from "./components/CreateExam/CreateExam";
+import Login from "./components/Login-Signup/Login";
 ReactDOM.render(
   // <div>
   //   <h1>Hello, Welcome to React and TypeScript</h1>
@@ -20,8 +21,7 @@ ReactDOM.render(
   //   />
   // </div>,
   <>
-  <CollapsibleExample/>,
-  <CreateExam/>
+  <Login/>
   </>,
   document.getElementById("root")
 );

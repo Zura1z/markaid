@@ -4,6 +4,8 @@ import FirstComponent from "./components/FirstComponent";
 import UserComponent from "./components/UserComponent";
 import AddCourse from "./components/Course/addcourse";
 import CollapsibleExample from './components/Navbar/Navbar'
+import EssayGrading from "./components/Essay-grading/EssayGrading";
+import { Navbar } from "react-bootstrap";
 ReactDOM.render(
   // <div>
   //   <h1>Hello, Welcome to React and TypeScript</h1>
@@ -16,8 +18,8 @@ ReactDOM.render(
   //   />
   // </div>,
   <>
-  <CollapsibleExample />
-  <AddCourse />
+  <CollapsibleExample/>,
+  <EssayGrading/>
   </>,
   document.getElementById("root")
 );

@@ -1,3 +1,4 @@
+// DEPCRECATED
 import logo from "./logo.svg";
 
 import AddCourse from "./components/Course/addcourse";

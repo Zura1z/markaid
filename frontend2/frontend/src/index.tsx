@@ -6,6 +6,7 @@ import AddCourse from "./components/Course/addcourse";
 import CollapsibleExample from './components/Navbar/Navbar'
 import EssayGrading from "./components/Essay-grading/EssayGrading";
 import { Navbar } from "react-bootstrap";
+import StudentTable from "./components/Course/StudentEnrolled/CourseStudent";
 ReactDOM.render(
   // <div>
   //   <h1>Hello, Welcome to React and TypeScript</h1>
@@ -19,7 +20,7 @@ ReactDOM.render(
   // </div>,
   <>
   <CollapsibleExample/>,
-  <EssayGrading/>
+  <StudentTable/>
   </>,
   document.getElementById("root")
 );

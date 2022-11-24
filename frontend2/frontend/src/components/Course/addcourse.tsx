@@ -6,7 +6,7 @@ import '/node_modules/react-resizable/css/styles.css';
 import GridLayout from "react-grid-layout";
 
 
-function BasicExample() {
+function Addcourse() {
   const layout = [
     { i: "a", x: 0, y: 0, w: 2, h: 2, static: true },
     { i: "b", x: 2, y: 0, w: 2, h: 2, static: true  },
@@ -90,4 +90,4 @@ function BasicExample() {
   );
 }
 
-export default BasicExample;
+export default Addcourse;

@@ -3,7 +3,6 @@ import * as ReactDOM from "react-dom";
 import FirstComponent from "./components/FirstComponent";
 import UserComponent from "./components/UserComponent";
 import AddCourse from "./components/Course/addcourse";
-import CollapsibleExample from './components/Navbar/Navbar'
 import EssayGrading from "./components/Essay-grading/EssayGrading";
 import { Navbar } from "react-bootstrap";
 import StudentTable from "./components/Course/StudentEnrolled/CourseStudent";
@@ -21,7 +20,7 @@ ReactDOM.render(
   //   />
   // </div>,
   <>
-  <Login/>
+    <Login />
   </>,
   document.getElementById("root")
 );

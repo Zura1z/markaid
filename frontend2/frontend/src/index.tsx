@@ -3,6 +3,7 @@ import * as ReactDOM from "react-dom";
 import FirstComponent from "./components/FirstComponent";
 import UserComponent from "./components/UserComponent";
 import AddCourse from "./components/Course/addcourse";
+import CollapsibleExample from './components/Navbar/Navbar'
 ReactDOM.render(
   // <div>
   //   <h1>Hello, Welcome to React and TypeScript</h1>
@@ -14,6 +15,9 @@ ReactDOM.render(
   //     dob={new Date()}
   //   />
   // </div>,
-  <AddCourse />,
+  <>
+  <CollapsibleExample />
+  <AddCourse />
+  </>,
   document.getElementById("root")
 );

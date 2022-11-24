@@ -36,7 +36,7 @@ function CollapsibleExample() {
             More deets
           </Nav.Link>
           <Nav.Link eventKey={2} href="#memes" style={{ color: "white" }}>
-            Dank memes
+            Profile
           </Nav.Link>
         </Nav>
       </Container>

@@ -8,22 +8,18 @@ function CollapsibleExample() {
   return (
     <Navbar collapseOnSelect expand="lg"  style={{backgroundColor:"#880e4f"}}>
       <Container>
-        <Navbar.Brand href="#home" style={{color:"white"}}>React-Bootstrap</Navbar.Brand>
+        <Navbar.Brand href="#home" style={{color:"white"}}>MarkAid</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
        
           <Nav className="me-auto">
-            <Nav.Link href="#features" style={{color:"white"}}>Features</Nav.Link>
-            <Nav.Link href="#pricing" style={{color:"white"}}>Pricing</Nav.Link>
-            <NavDropdown title="Dropdown" id="collasible-nav-dropdown" style={{color:"white"}}>
-              <NavDropdown.Item href="#action/3.1" style={{color:"white"}}>Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2" style={{color:"white"}}>
-                Another action
+            <Nav.Link href="#features" style={{color:"white"}}>Classroom</Nav.Link>
+            <Nav.Link href="#pricing" style={{color:"white"}}>Exam Genration</Nav.Link>
+            <NavDropdown title="Marking" id="collasible-nav-dropdown" style={{color:"white"}}>
+              <NavDropdown.Item href="#action/3.1" >Essay Marking</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2" >
+                Exam Marking
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3" style={{color:"white"}}>Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
+             
             </NavDropdown>
           </Nav>
           <Nav>

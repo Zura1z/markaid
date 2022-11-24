@@ -4,46 +4,39 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-function Header() {
+function CollapsibleExample() {
   return (
     <Navbar collapseOnSelect expand="lg" style={{ backgroundColor: "#880e4f" }}>
       <Container>
         <Navbar.Brand href="#home" style={{ color: "white" }}>
-          React-Bootstrap
+          MarkAid
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 
         <Nav className="me-auto">
           <Nav.Link href="#features" style={{ color: "white" }}>
-            Features
+            Classroom
           </Nav.Link>
           <Nav.Link href="#pricing" style={{ color: "white" }}>
-            Pricing
+            Exam Genration
           </Nav.Link>
           <NavDropdown
-            title="Dropdown"
+            title="Marking"
             id="collasible-nav-dropdown"
             style={{ color: "white" }}
           >
-            <NavDropdown.Item href="#action/3.1" style={{ color: "white" }}>
-              Action
+            <NavDropdown.Item href="#action/3.1">
+              Essay Marking
             </NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2" style={{ color: "white" }}>
-              Another action
-            </NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.3" style={{ color: "white" }}>
-              Something
-            </NavDropdown.Item>
-            <NavDropdown.Divider />
-            <NavDropdown.Item href="#action/3.4">
-              Separated link
-            </NavDropdown.Item>
+            <NavDropdown.Item href="#action/3.2">Exam Marking</NavDropdown.Item>
           </NavDropdown>
         </Nav>
         <Nav>
-          <Nav.Link href="#deets" style={{ color: "white" }}></Nav.Link>
+          <Nav.Link href="#deets" style={{ color: "white" }}>
+            More deets
+          </Nav.Link>
           <Nav.Link eventKey={2} href="#memes" style={{ color: "white" }}>
-            Profile
+            Dank memes
           </Nav.Link>
         </Nav>
       </Container>
@@ -51,4 +44,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default CollapsibleExample;

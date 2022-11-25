@@ -19,7 +19,6 @@ function Addcourse() {
     <div style={{marginLeft: '100px',marginTop:'50px'}}>
       <h1>Courses</h1>
     </div>
-    
       <GridLayout
         className="layout"
         layout={layout}

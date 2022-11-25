@@ -16,16 +16,17 @@ function Addcourse() {
   ];
   return (
     <>
-    <div style={{marginLeft: '200px',marginTop:'50px'}}>
+    <div style={{marginLeft: '100px',marginTop:'50px'}}>
       <h1>Courses</h1>
     </div>
+    
       <GridLayout
         className="layout"
         layout={layout}
         cols={8}
-        rowHeight={50}
+        rowHeight={40}
         width={1500}
-        margin={[200,20]}
+        margin={[100,20]}
       >
         <div key="a" style={{ padding: '20px' }}>
         <Card style={{ width: '20rem' }}>

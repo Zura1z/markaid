@@ -1,6 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import Chat from "./components/Chat/Chat";
+import StudentTable from "./components/Course/StudentEnrolled/CourseStudent";
 // import FirstComponent from "./components/FirstComponent";
 // import UserComponent from "./components/UserComponent";
 // import AddCourse from "./components/Course/addcourse";
@@ -10,7 +11,7 @@ import Header from "./components/Header/Header";
 // import CreateExam from "./components/CreateExam/CreateExam";
 ReactDOM.render(
   <>
-    <Chat />,
+    <StudentTable />,
   </>,
   document.getElementById("root")
 );

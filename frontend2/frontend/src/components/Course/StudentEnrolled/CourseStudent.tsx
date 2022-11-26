@@ -5,7 +5,6 @@ import '/node_modules/react-resizable/css/styles.css';
 import Button from 'react-bootstrap/Button';
 // import {0-circle-fill  } from 'react-bootstrap-icons'
 import * as Icon from 'react-bootstrap-icons';
-import { Navbar } from 'react-bootstrap';
 function StudentTable() {
   return (
     <>

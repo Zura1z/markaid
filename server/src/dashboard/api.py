@@ -18,21 +18,21 @@ def response(data, error=""):
 
 # Create another endpoint to create a new course data (POST) (authenticated)
 class CreateCourseAPIView(APIView):
-    """ Test Outreach API. """
+    """ Test Course API. """
 
     # read in post data
     def post(self, request, format=None):
         course_data = request.data
-
+        print(course_data)
         try:
             # sanitize fields from post data
             title = sanitize_string(course_data["title"])
-            active = sanitize_string(course_data["active"])
-            noOfStudents = sanitize_string(course_data["noOfStudents"])
+            active = course_data["active"]
+            noOfStudents = course_data["noOfStudents"]
             description = sanitize_string(course_data["description"])
         except KeyError:
             return response(None, "Missing fields")
-
+        print(title, active, noOfStudents, description)
         course_model = Course.create(
             title=title,
             active=active,
@@ -40,7 +40,12 @@ class CreateCourseAPIView(APIView):
             description=description,
         )
 
-        return response(self.serializer_class(course_model).data)
+        return response(CourseSerializer(course_model).data)
+    
+    def get(self, request, format=None):
+        couse = Course.objects.all()
+        serializer = CourseSerializer(couse, many=True)
+        return Response(serializer.data)
 
 
 # TODO: Create one to list all course data (filterable) (pagination) (GET) (authenticated)

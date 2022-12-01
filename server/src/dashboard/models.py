@@ -15,3 +15,8 @@ class Course(models.Model):
 
     def _str_(self):
         return self.title
+    
+    def create(title, active, noOfStudents, description):
+        course = Course(title=title, active=active, noOfStudents=noOfStudents, description=description)
+        course.save()
+        return course

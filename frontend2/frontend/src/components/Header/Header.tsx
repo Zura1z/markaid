@@ -1,14 +1,11 @@
-import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import Container from "react-bootstrap/Container";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import "bootstrap/dist/css/bootstrap.min.css";
+
 import * as Icon from "react-bootstrap-icons";
-import { Icon0Circle } from "react-bootstrap-icons";
 
-import { Link } from "react-router-dom";
-
-import Main from "../../main";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function Header() {
   return (
@@ -28,17 +25,19 @@ function Header() {
             <Navbar.Toggle aria-controls="navbar-dark-example" />
             <Navbar.Collapse id="navbar-dark-example">
               <Nav style={{ marginLeft: "40px" }}>
-                {/* <Nav.Link href="#features" style={{ color: "white" }}>
-                  Classroom
-                </Nav.Link> */}
-                <Link to="/">EssayGrading</Link>
-                <Nav.Link href="#CreateExam" style={{ color: "white" }}>
+                <Nav.Link href="/exam/create" style={{ color: "white" }}>
                   Create Exam
                 </Nav.Link>
-                <Nav.Link href="/qa">QuestionAnswer</Nav.Link>
-                <Nav.Link href="/qa" style={{ color: "white" }}>
-                  AddCourse
+                <Nav.Link href="/grade/essay" style={{ color: "white" }}>
+                  Grade Essay
                 </Nav.Link>
+                <Nav.Link href="/agent/qa" style={{ color: "white" }}>
+                  Q&A
+                </Nav.Link>
+                <Nav.Link href="/student/info" style={{ color: "white" }}>
+                  Students
+                </Nav.Link>
+
                 <NavDropdown id="nav-dropdown-dark-example" title="Marking">
                   <NavDropdown.Item href="#action/3.1">
                     Essay Marking

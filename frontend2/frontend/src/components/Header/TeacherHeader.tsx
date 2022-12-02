@@ -7,7 +7,7 @@ import * as Icon from "react-bootstrap-icons";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
-function Header() {
+function TeacherHeader() {
   return (
     <>
       <div style={{ padding: "10px" }}>
@@ -28,17 +28,14 @@ function Header() {
                 <Nav.Link href="/exam/create" style={{ color: "white" }}>
                   Create Exam
                 </Nav.Link>
-                <Nav.Link href="/grade/essay" style={{ color: "white" }}>
-                  Grade Essay
+                <Nav.Link href="" style={{ color: "white" }}>
+                  Classrooms
                 </Nav.Link>
-                <Nav.Link href="/agent/qa" style={{ color: "white" }}>
-                  Q&A
+                
+                <Nav.Link href="" style={{ color: "white" }}>
+                  Feedbacks
                 </Nav.Link>
-                <Nav.Link href="/student/info" style={{ color: "white" }}>
-                  Students
-                </Nav.Link>
-
-                <NavDropdown id="nav-dropdown-dark-example" title="Marking">
+                <NavDropdown id="nav-dropdown-dark-example" title="Marking" >
                   <NavDropdown.Item href="#action/3.1">
                     Essay Marking
                   </NavDropdown.Item>
@@ -46,10 +43,14 @@ function Header() {
                     Rubric Based Marking
                   </NavDropdown.Item>
                 </NavDropdown>
+
+                <Nav.Link href="/student/info" style={{ color: "white",marginLeft:"700px",width:"150px"}}>
+                  Manage Profile
+                </Nav.Link>
               </Nav>
               <Icon.Person
                 size="30"
-                style={{ marginLeft: "850px", color: "white" }}
+                style={{ color: "white" }}
               />
               <div style={{ color: "white" }}>
                 <NavDropdown id="nav-dropdown-dark-example" title="User">
@@ -67,4 +68,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default TeacherHeader;

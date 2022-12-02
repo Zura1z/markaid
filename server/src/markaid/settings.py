@@ -41,6 +41,9 @@ INSTALLED_APPS = [
     # user apps
     'dashboard',
 
+    # Internal apps
+    'AIModels',
+
     # third party apps
     'rest_framework',
     'rest_framework.authtoken',

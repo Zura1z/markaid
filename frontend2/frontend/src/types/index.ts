@@ -3,3 +3,8 @@ export type Course = {
   year: string;
   description: string;
 };
+
+export type QA = {
+  question: string;
+  context: string;
+};

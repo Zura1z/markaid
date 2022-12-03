@@ -9,12 +9,15 @@ from rest_framework.response import Response
 from rest_framework import status
 
 from .apps import AimodelsConfig
+
 class call_model(APIView):
 
-    def get(self,request, format=None):
+    def post(self,request, format=None):
+        # print(request.data)
         model_data = request.data
         print(model_data)
-        if request.method == 'GET':
+        
+        if request.method == 'POST':
             
             # sentence is the query we want to get the prediction for
             context =  model_data['context']
@@ -22,6 +25,6 @@ class call_model(APIView):
             
             # predict method used to get the prediction
             response = AimodelsConfig.predict(context=context,question=question)
-            
+            print(response)
             # returning JSON response
             return JsonResponse(response)

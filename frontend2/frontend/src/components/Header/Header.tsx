@@ -10,7 +10,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 function Header() {
   return (
     <>
-      <div style={{ padding: "20px" }}>
+      <div style={{ padding: "10px" }}>
         <Navbar
           variant="dark"
           style={{ backgroundColor: "#836eaa", borderRadius: "13px" }}

@@ -16,11 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from AIModels import views
+from AIModels import api
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('dashboard.urls', namespace='dashboard')),
     # path('api/', include('AIModels.urls', namespace='AIModels')),
-    path('api/model/', views.call_model.as_view())
+    path('api/model/', api.call_model.as_view())
 ]

@@ -23,14 +23,16 @@ class AimodelsConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
     name = 'AIModels'
 
-    # tokenizer = DistilBertTokenizer.from_pretrained('distilbert-base-uncased',return_token_type_ids = True)
-    # model = DistilBertForQuestionAnswering.from_pretrained('distilbert-base-uncased-distilled-squad')
-
-    
-
     def predict(context, question):
-        model = DistilBertForQuestionAnswering.from_pretrained('distilbert-base-uncased-distilled-squad')
-        tokenizer = DistilBertTokenizer.from_pretrained('distilbert-base-uncased-distilled-squad')
+        #Download the model and tokenizer
+        #model = DistilBertForQuestionAnswering.from_pretrained('distilbert-base-uncased-distilled-squad')
+        #tokenizer = DistilBertTokenizer.from_pretrained('distilbert-base-uncased-distilled-squad')
+        #model.save_pretrained('./AIModels/models/distilbert-base-uncased-distilled-squad/model/')
+        #tokenizer.save_pretrained("./AIModels/models/distilbert-base-uncased-distilled-squad/tokenizer/")
+
+        #Locally load the model and tokenizer
+        model = DistilBertForQuestionAnswering.from_pretrained('./AIModels/models/distilbert-base-uncased-distilled-squad/model/')        
+        tokenizer = DistilBertTokenizer.from_pretrained('./AIModels/models/distilbert-base-uncased-distilled-squad/tokenizer/')
         encoding = tokenizer.encode_plus(question, context)
         input_ids, attention_mask = encoding["input_ids"], encoding["attention_mask"]
         start_scores, end_scores = model(torch.tensor([input_ids]), attention_mask=torch.tensor([attention_mask]), return_dict=False)
@@ -38,8 +40,6 @@ class AimodelsConfig(AppConfig):
         answer_tokens = tokenizer.convert_ids_to_tokens(ans_tokens , skip_special_tokens=True)
         answer= tokenizer.convert_tokens_to_string(answer_tokens)
 
-        # qamodel = QA.create(question=question, context=context, answer=answer)
-        # return answer
         return {"answer": answer}
 
 

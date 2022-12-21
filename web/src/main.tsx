@@ -5,6 +5,7 @@ import CreateExamPage from "./pages/CreateExamPage";
 import EssayGradingPage from "./pages/EssayGradingPage";
 import QuestionAnswerPage from "./pages/QuestionAnswerPage";
 import StudentTablePage from "./pages/StudentTablePage";
+import CreateQuizPage from "./pages/CreateQuiz";
 
 const Main = () => {
   return (
@@ -15,6 +16,7 @@ const Main = () => {
       <Route path="/grade/essay" element={<EssayGradingPage />} />
       <Route path="/agent/qa" element={<QuestionAnswerPage />} />
       <Route path="/student/info" element={<StudentTablePage />} />
+      <Route path="/agent/generate" element={<CreateQuizPage />} />
     </Routes>
   );
 };

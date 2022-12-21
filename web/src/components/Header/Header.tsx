@@ -24,7 +24,7 @@ function Header() {
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="navbar-dark-example" />
             <Navbar.Collapse id="navbar-dark-example">
-              <Nav style={{ marginLeft: "40px" }}>
+              <Nav style={{ marginLeft: "2%" }}>
                 <Nav.Link href="/exam/create" style={{ color: "white" }}>
                   Create Exam
                 </Nav.Link>
@@ -33,6 +33,9 @@ function Header() {
                 </Nav.Link>
                 <Nav.Link href="/agent/qa" style={{ color: "white" }}>
                   Q&A
+                </Nav.Link>
+                <Nav.Link href="/agent/generate" style={{ color: "white" }}>
+                  Generate Quiz
                 </Nav.Link>
                 <Nav.Link href="/student/info" style={{ color: "white" }}>
                   Students

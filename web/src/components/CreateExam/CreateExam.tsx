@@ -103,7 +103,7 @@ function CreateExam() {
       <Button
         variant="primary"
         size="lg"
-        style={{ backgroundColor: "#9e0707", marginLeft: "900px" }}
+        style={{ backgroundColor: "#9e0707", marginLeft: "1100px" }}
       >
         Delete Question
       </Button>

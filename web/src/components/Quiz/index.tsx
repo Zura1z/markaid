@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import * as Icon from "react-bootstrap-icons";
 
-function EssayGrading() {
+function Quiz() {
   return (
     <>
       <div style={{ marginLeft: "100px", marginTop: "50px", color: "#4e2a84" }}>
@@ -17,7 +17,7 @@ function EssayGrading() {
       </div>
       <div>
         <h1 style={{ marginLeft: "150px", padding: "50px", color: "#4e2a84" }}>
-          Essay Grading
+          Quiz Genration
         </h1>
       </div>
       <Form
@@ -33,29 +33,38 @@ function EssayGrading() {
           controlId="formBasicEmail"
           style={{ color: "#4e2a84", padding: "40px" }}
         >
-          <Form.Label className="fw-bold">Input Essay</Form.Label>
+          <Form.Label className="fw-bold">Input Context</Form.Label>
           <Form.Control type="essay" style={{ height: "200px" }} />
         </Form.Group>
-        <Form.Group
-          className="mb-3"
-          controlId="formBasicEmail"
-          style={{ color: "#4e2a84", padding: "40px" }}
-        >
-          <Form.Label className="fw-bold">Input Essay Answer</Form.Label>
-          <Form.Control type="essay-ans" style={{ height: "200px" }} />
-        </Form.Group>
+        <div style={{ marginLeft: "30%" }}>
+          <Button variant="outline-secondary">Genratere MCQ</Button>{" "}
+          <Button variant="outline-secondary">Genratere True/False</Button>{" "}
+          <Button variant="outline-secondary">Genratere FAQ</Button>{" "}
+          <Button variant="outline-secondary">Genratere Q/Ans</Button> <br />
+          <br />
+          <br />
+          <br />
+        </div>
+
         <Button
           variant="outline-light"
           className="fw-bold"
           style={{
             color: "white",
-            backgroundColor: "#4e2a84",
-            marginLeft: "40%",
+            backgroundColor: "#700303",
+            marginLeft: "30%",
             width: "300px",
           }}
         >
-          Submit
-        </Button>{" "}
+          Remove Question
+        </Button>
+        <Button
+          variant="outline-light"
+          className="fw-bold"
+          style={{ color: "white", backgroundColor: "#4e2a84", width: "300px" }}
+        >
+          Genrate Test
+        </Button>
         <br />
         <br />
         <br />
@@ -64,4 +73,4 @@ function EssayGrading() {
   );
 }
 
-export default EssayGrading;
+export default Quiz;

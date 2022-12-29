@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Logo from './logo.png';
+
 import { Container, Content, ClosedSideBar, OpenSideBar } from "./styles";
 
 import { BsLockFill} from "react-icons/bs";
@@ -69,7 +69,7 @@ export function SideBar() {
 									</button>
 								</span>
 								<div>
-                                <img src={Logo}  />
+                               
 									<h1>logo </h1>
 								</div>
 

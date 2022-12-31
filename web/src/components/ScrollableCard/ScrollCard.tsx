@@ -1,15 +1,25 @@
 import Card from "react-bootstrap/Card";
+import styled from "styled-components";
+
 import "./Scroller.css";
-// import "bootstrap/dist/css/bootstrap.min.css";
+
 import { CourseCardProps } from "../../types/index";
-const items = [...Array(100)].map((val, i) => `Item ${i}`);
+
+const SCard = styled(Card)`
+  background: #836eaa !important;
+  border-radius: 0px !important;
+  margin-left: 350px !important;
+  border-color: #222;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+`;
 
 export function BasicExample() {
   return (
-    <Card style={{ width: "30rem", backgroundColor: "#836eaa" }}>
+    <SCard style={{ width: "30rem", backgroundColor: "#836eaa" }}>
       {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
       <Card.Body>
-        <Card.Title style={{ color: "white" }}>Card Title</Card.Title>
+        <Card.Title style={{ color: "white" }}>Courses</Card.Title>
         <div className="container">
           <Card.Text
             className="center-col"
@@ -47,7 +57,7 @@ export function BasicExample() {
           </Card.Text>
         </div>
       </Card.Body>
-    </Card>
+    </SCard>
   );
 }
 
@@ -63,7 +73,3 @@ export function CourseInfo(props: CourseCardProps) {
     </div>
   );
 }
-
-// export  CourseInfo;
-
-// export default ScrollableCard;

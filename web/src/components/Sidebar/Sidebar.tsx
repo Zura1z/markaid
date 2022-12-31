@@ -15,57 +15,13 @@ export function SideBar() {
 	return (
 		<Container style={{backgroundColor: "black"}}>
 			<Content >
-				{!sideBar ? (
-					<ClosedSideBar style={{backgroundColor: "black"}}>
-						<nav>
-							<button onClick={handleChangeSideBar} style={{backgroundColor: "transparent",borderBlockColor:"transparent"}}>
-                            <Icon.List size={"20"} style={{color:"white"}} />
-							</button>
-
-							
-
-							{/* Links principais do app */}
-							<ul>
-								<a href="/" title="Assignment">
-                                <Icon.CardText style={{marginRight:"40%"}}/>
-								</a>
-								<a href="/" title="Q&A">
-                                <Icon.ChatFill style={{marginRight:"40%"}}/>
-								</a>
-								<a href="/" title="Quiz">
-                                <Icon.CardChecklist style={{marginRight:"40%"}}/>
-								</a>
-								<a href="/" title="Feedback">
-                                <Icon.Flag style={{marginRight:"40%"}} />
-								</a>
-							</ul>
-						</nav>
-						<div>
-							{/* Icones que pode não ser tão principais no app */}
-							<ul>
-								<a href="/" title="Notificações">
-									{/* <IoNotificationsSharp /> */}
-								</a>
-								<a href="/" title="Configurações">
-                                <Icon.Sliders style={{marginRight:"40%"}} />
-								</a>
-								<a href="/" title="Sair da conta">
-                                <Icon.PersonCircle  style={{marginRight:"40%"}}/>
-								</a>
-							</ul>
-
-							<span>
-								
-							</span>
-						</div>
-					</ClosedSideBar>
-				) : (
-					<OpenSideBar style={{backgroundColor: "#1b1919"}}>
+				 
+					<OpenSideBar style={{backgroundColor: "black"}}>
 						<section>
 							<nav>
 								<span>
 									<button onClick={handleChangeSideBar} style={{backgroundColor:"transparent"}}>
-                                    <Icon.ArrowLeft size={"20"} style={{color:"white"}} />
+                                    <Icon.ArrowLeft size={"30"} style={{color:"white"}} />
 									</button>
 								</span>
 								<div>
@@ -77,20 +33,20 @@ export function SideBar() {
                                 <div >
 								<ul>
 									<a href="/" >
-										<Icon.CardText style={{color:"#836eaa"}}/>
+										<Icon.CardText size={"50"} style={{color:"white "}}/>
 										<p style={{fontSize:"20px",color:"white",fontFamily:"cursive"}}>Assignment</p>
 									</a>
 									<a href="/" title="Alguma coisa">
-										<Icon.ChatFill style={{color:"#836eaa"}}/>
-										<p style={{fontSize:"20px",color:"white",fontFamily:"fantasy"}}>Q&A</p>
+										<Icon.ChatFill style={{color:"white"}}/>
+										<p style={{fontSize:"25px",color:"white",fontFamily:"fantasy"}}>Q&A</p>
 									</a>
 									<a href="/" title="Alguma coisa">
-										<Icon.CardChecklist style={{color:"#836eaa"}}/>
-										<p style={{fontSize:"20px",color:"white",fontFamily:"monospace"}}>Quiz</p>
+										<Icon.CardChecklist style={{color:"white"}}/>
+										<p style={{fontSize:"25px",color:"white",fontFamily:"monospace"}}>Quiz</p>
 									</a>
 									<a href="/" title="Alguma coisa">
-										<Icon.Flag style={{color:"#836eaa"}}/>
-										<p style={{fontSize:"20px",color:"white",fontFamily:"sans-serif"}}>Feedback</p>
+										<Icon.Flag style={{color:"white"}}/>
+										<p style={{fontSize:"25spx",color:"white",fontFamily:"sans-serif"}}>Feedback</p>
 									</a>
 								</ul>
                                 </div>
@@ -118,8 +74,8 @@ export function SideBar() {
 						</section>
 						<aside onClick={handleChangeSideBar} />
 					</OpenSideBar>
-				)}
+				
 			</Content>
 		</Container>
 	);
-}
+				}

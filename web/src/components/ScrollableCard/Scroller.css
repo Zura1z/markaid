@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: row;
     height: 30vh;
-    width: 30vh;
+    /* width: 30vh; */
   }
   
   .left-col {
@@ -27,3 +27,26 @@
     align-items: center;
     background: #e7e7e7;
   }
+
+/* Define styles in a CSS file */
+.card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin: 20px;
+  padding: 20px;
+}
+
+.card-header {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.card-body {
+  font-size: 16px;
+}
+
+.student-count {
+  color: #888;
+}

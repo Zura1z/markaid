@@ -6,16 +6,26 @@ import "/node_modules/react-grid-layout/css/styles.css";
 import "/node_modules/react-resizable/css/styles.css";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-
+import * as Icon from "react-bootstrap-icons";
 function CreateExam() {
   return (
     <>
+    <div style={{ marginLeft: "100px", marginTop: "50px", color: "#4e2a84" }}>
+        <Button
+          variant="outline-secondary"
+          style={{ color: "white", backgroundColor: "#4e2a84" }}
+        >
+          <Icon.ArrowLeft size={"20"} />
+          Back
+        </Button>
+      </div>
       <div>
         <h1
           style={{
             marginRight: "100px",
             marginLeft: "100px",
             color: "#50254e",
+            padding:"20px"
           }}
         >
           Create Exam
@@ -103,7 +113,7 @@ function CreateExam() {
       <Button
         variant="primary"
         size="lg"
-        style={{ backgroundColor: "#9e0707", marginLeft: "1100px" }}
+        style={{ backgroundColor: "#9e0707", marginLeft: "70%" }}
       >
         Delete Question
       </Button>

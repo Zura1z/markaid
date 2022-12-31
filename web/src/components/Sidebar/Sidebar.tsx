@@ -8,7 +8,6 @@ import * as Icon from "react-bootstrap-icons";
 // import { faLongArrowAltLeft } from "@fortawesome/free-solid-svg-icons";
 export function SideBar() {
   const [sideBar, setSideBar] = useState(false);
-
   function handleChangeSideBar() {
     setSideBar((prevState) => !prevState);
   }

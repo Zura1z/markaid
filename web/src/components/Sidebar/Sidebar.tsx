@@ -14,53 +14,7 @@ export function SideBar() {
   return (
     <Container style={{ backgroundColor: "black" }}>
       <Content>
-        {!sideBar ? (
-          <ClosedSideBar style={{ backgroundColor: "black" }}>
-            <nav>
-              <button
-                onClick={handleChangeSideBar}
-                style={{
-                  backgroundColor: "transparent",
-                  borderBlockColor: "transparent",
-                }}
-              >
-                <Icon.List size={"20"} style={{ color: "white" }} />
-              </button>
-
-              {/* Links principais do app */}
-              <ul>
-                <a href="/" title="Assignment">
-                  <Icon.CardText style={{ marginRight: "40%" }} />
-                </a>
-                <a href="/" title="Q&A">
-                  <Icon.ChatFill style={{ marginRight: "40%" }} />
-                </a>
-                <a href="/" title="Quiz">
-                  <Icon.CardChecklist style={{ marginRight: "40%" }} />
-                </a>
-                <a href="/" title="Feedback">
-                  <Icon.Flag style={{ marginRight: "40%" }} />
-                </a>
-              </ul>
-            </nav>
-            <div>
-              {/* Icones que pode não ser tão principais no app */}
-              <ul>
-                <a href="/" title="Notificações">
-                  {/* <IoNotificationsSharp /> */}
-                </a>
-                <a href="/" title="Configurações">
-                  <Icon.Sliders style={{ marginRight: "40%" }} />
-                </a>
-                <a href="/" title="Sair da conta">
-                  <Icon.PersonCircle style={{ marginRight: "40%" }} />
-                </a>
-              </ul>
-
-              <span></span>
-            </div>
-          </ClosedSideBar>
-        ) : (
+       
           <OpenSideBar style={{ backgroundColor: "#1b1919" }}>
             <section>
               <nav>
@@ -163,7 +117,7 @@ export function SideBar() {
             </section>
             <aside onClick={handleChangeSideBar} />
           </OpenSideBar>
-        )}
+        
       </Content>
     </Container>
   );

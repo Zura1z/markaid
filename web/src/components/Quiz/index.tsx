@@ -6,7 +6,7 @@ import * as Icon from "react-bootstrap-icons";
 function Quiz() {
   return (
     <>
-      <div style={{ marginLeft: "100px", marginTop: "50px", color: "#4e2a84" }}>
+      <div style={{ marginLeft: "17%", marginTop: "50px", color: "#4e2a84" }}>
         <Button
           variant="outline-secondary"
           style={{ color: "white", backgroundColor: "#4e2a84" }}
@@ -16,13 +16,13 @@ function Quiz() {
         </Button>
       </div>
       <div>
-        <h1 style={{ marginLeft: "150px", padding: "50px", color: "#4e2a84" }}>
+        <h1 style={{ marginLeft: "18%", padding: "50px", color: "#4e2a84" }}>
           Quiz Genration
         </h1>
       </div>
       <Form
         style={{
-          marginLeft: "200px",
+          marginLeft: "20%",
           marginRight: "70px",
           backgroundColor: "#e4e0ee",
           borderRadius: "13px",

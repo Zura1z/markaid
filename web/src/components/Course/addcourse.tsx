@@ -16,19 +16,19 @@ function Addcourse() {
   ];
   return (
     <>
-    <div style={{marginLeft: '200px',marginTop:'50px'}}>
+    <div style={{marginLeft: '18%',marginTop:'50px'}}>
       <h1>Courses</h1>
     </div>
       <GridLayout
         className="layout"
         layout={layout}
         cols={8}
-        rowHeight={50}
-        width={1500}
-        margin={[200,20]}
+        rowHeight={90}
+        width={2100}
+        margin={[500,70]}
       >
         <div key="a" style={{ padding: '20px' }}>
-        <Card style={{ width: '20rem' }}>
+        <Card style={{ width: '50rem' }}>
         <Card.Body>
           <Card.Title>Object Oriented Programing</Card.Title>
           <Card.Text>
@@ -42,7 +42,7 @@ function Addcourse() {
       </Card>
         </div>
         <div key="b" style={{ padding: '20px' }}>
-        <Card style={{ width: '20rem' }}>
+        <Card style={{ width: '50rem'}}>
         <Card.Body>
           <Card.Title>Object Oriented Programing</Card.Title>
           <Card.Text>
@@ -56,7 +56,7 @@ function Addcourse() {
       </Card>
         </div>
         <div key="c" style={{ padding: '20px' }}>
-        <Card style={{ width: '20rem' }}>
+        <Card style={{ width: '50rem' }}>
         <Card.Body>
           <Card.Title>Object Oriented Programing</Card.Title>
           <Card.Text>
@@ -70,7 +70,7 @@ function Addcourse() {
       </Card>
         </div>
         <div key="D" style={{ padding: '20px' }}>
-        <Card style={{ width: '20rem' }}>
+        <Card style={{ width: '50rem' }}>
         <Card.Body>
           <Card.Title>Object Oriented Programing</Card.Title>
           <Card.Text>

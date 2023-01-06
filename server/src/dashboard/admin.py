@@ -1,13 +1,13 @@
 from django.contrib import admin
 
-from .models import Account,Course
+from .models import User, Course, Quiz, Question, Answer
 
-admin.site.site_header = 'Markaid Dashboard Admin'
+admin.site.register(Course)
+admin.site.register(Quiz)
+admin.site.register(Question)
+admin.site.register(Answer)
 
-@admin.register(Account)
-class AccountAdmin(admin.ModelAdmin):
-    list_display = ('id', 'username', 'email')
+class UserAdmin(admin.ModelAdmin):
+    list_display = ('id', 'first_name', 'last_name', 'email', 'is_teacher')
 
-@admin.register(Course)
-class CourseAdmin(admin.ModelAdmin):
-    list_display = ('id', 'title', 'description', 'active', 'noOfStudents')
+admin.site.register(User, UserAdmin)

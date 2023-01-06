@@ -7,12 +7,15 @@ import { SideBar } from "./components/Sidebar/Sidebar";
 
 ReactDOM.render(
   <>
-    <React.StrictMode>
+    {/* <React.StrictMode>
       <BrowserRouter>
-        {/* <Main /> */}
+        
         <SideBar />
       </BrowserRouter>
-    </React.StrictMode>
+    </React.StrictMode> */}
+    {/* <SideBar/>
+    <ExamDetails/>
+    <Footer/> */}
     ,
   </>,
   document.getElementById("root")

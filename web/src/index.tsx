@@ -13,9 +13,9 @@ ReactDOM.render(
         <SideBar />
       </BrowserRouter>
     </React.StrictMode> */}
-    <SideBar/>
+    {/* <SideBar/>
     <ExamDetails/>
-    <Footer/>
+    <Footer/> */}
     ,
   </>,
   document.getElementById("root")

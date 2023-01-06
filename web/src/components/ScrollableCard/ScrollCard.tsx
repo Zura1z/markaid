@@ -14,7 +14,7 @@ const SCard = styled(Card)`
   transition: all 0.3s ease-in-out;
 `;
 
-export function BasicExample() {
+export function ScrollCard() {
   return (
     <SCard style={{ width: "30rem", backgroundColor: "#836eaa" }}>
       {/* <Card.Img variant="top" src="holder.js/100px180" /> */}

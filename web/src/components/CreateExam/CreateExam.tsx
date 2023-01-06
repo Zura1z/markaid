@@ -10,7 +10,7 @@ import * as Icon from "react-bootstrap-icons";
 function CreateExam() {
   return (
     <>
-    <div style={{ marginLeft: "100px", marginTop: "50px", color: "#4e2a84" }}>
+    <div style={{ marginLeft: "17%", marginTop: "50px", color: "#4e2a84" }}>
         <Button
           variant="outline-secondary"
           style={{ color: "white", backgroundColor: "#4e2a84" }}
@@ -23,7 +23,7 @@ function CreateExam() {
         <h1
           style={{
             marginRight: "100px",
-            marginLeft: "100px",
+            marginLeft: "20%",
             color: "#50254e",
             padding:"20px"
           }}
@@ -31,7 +31,7 @@ function CreateExam() {
           Create Exam
         </h1>
       </div>
-      <Form style={{ marginRight: "100px", marginLeft: "100px" }}>
+      <Form style={{ marginRight: "100px",  marginLeft: "20%",}}>
         <Row>
           <Col>
             <p>Exam Name</p>
@@ -65,14 +65,14 @@ function CreateExam() {
       <Card
         style={{
           marginRight: "100px",
-          marginLeft: "100px",
+          marginLeft: "20%",
           backgroundColor: "#ede5ed",
         }}
       >
         <Form
           style={{
             marginRight: "110px",
-            marginLeft: "110px",
+            marginLeft: "20%",
             marginTop: "20px",
           }}
         >
@@ -99,7 +99,7 @@ function CreateExam() {
       <Button
         variant="primary"
         size="lg"
-        style={{ backgroundColor: "green", marginLeft: "100px" }}
+        style={{ backgroundColor: "green",  marginLeft: "20%" }}
       >
         Add Question
       </Button>{" "}
@@ -113,7 +113,7 @@ function CreateExam() {
       <Button
         variant="primary"
         size="lg"
-        style={{ backgroundColor: "#9e0707", marginLeft: "70%" }}
+        style={{ backgroundColor: "#9e0707", marginLeft: "90%" }}
       >
         Delete Question
       </Button>

@@ -12,7 +12,7 @@ import {
 
 export default function Footer() {
   return (
-    <MDBFooter  style={{ backgroundColor: '#836eaa' ,bottom: 0,position:"fixed",width:"100%"}}>
+    <MDBFooter  style={{ marginLeft: "8%",backgroundColor: '#836eaa' ,bottom: 0,position:"fixed",width:"100%"}}>
       <MDBContainer className='p-4 pb-0'>
         <section className=''>
           <p className='d-flex justify-content-center align-items-center'>

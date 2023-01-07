@@ -8,18 +8,18 @@ import * as Icon from 'react-bootstrap-icons';
 function StudentTable() {
   return (
     <>
-    <div style={{marginLeft:"100px",marginTop:"50px", color:"#4e2a84"}}>
+    <div style={{marginLeft:"17%",marginTop:"50px", color:"#4e2a84"}}>
 
      <Button variant="outline-secondary" style={{color:"white",backgroundColor:"#4e2a84"}}><Icon.ArrowLeft size={'20'}/>Back</Button>
     </div>
     <div>
-        <h1 style={{marginLeft:"100px",marginTop:"50px", color:"#4e2a84"}}>Object Oriented Programing</h1>
+        <h1 style={{marginLeft:"18%",marginTop:"50px", color:"#4e2a84"}}>Object Oriented Programing</h1>
     </div>
     <div>
-      <Button variant="outline-secondary" style={{padding:"2px",marginLeft:"1300px",width:"200px",color:"white",backgroundColor:"#4e2a84"}}><Icon.PersonAdd size={'30'}/>Add Student</Button>
+      <Button variant="outline-secondary" style={{padding:"2px",marginLeft:"85%",width:"200px",color:"white",backgroundColor:"#4e2a84"}}><Icon.PersonAdd size={'30'}/>Add Student</Button>
 
     </div>
-    <div style={{padding:"100px", marginTop:"-50px"}}>
+    <div style={{padding:"5%",marginLeft:"17%"}}>
     <Table striped bordered hover >
       <thead >
         <tr style={{backgroundColor:"#836eaa", color:"white"}}>
@@ -35,35 +35,35 @@ function StudentTable() {
           <td>1</td>
           <td>Bilal</td>
           <td>i191874</td>
-          <td style={{color:"red",textAlign:"center"}}><Icon.Trash/></td>
+          <td style={{color:"red",textAlign:"center"}}><Icon.Trash size={'20'}/></td>
          
         </tr>
         <tr style={{textAlign:"center"}}>
           <td>2</td>
           <td>Zuraiz</td>
           <td>i191793</td>
-          <td style={{color:"red",textAlign:"center"}}><Icon.Trash/></td>
+          <td style={{color:"red",textAlign:"center"}}><Icon.Trash size={'20'}/></td>
         
         </tr>
         <tr style={{textAlign:"center"}}>
           <td>3</td>
           <td>Mustafa</td>
           <td>i191799</td>
-          <td style={{color:"red",textAlign:"center"}}><Icon.Trash/></td>
+          <td style={{color:"red",textAlign:"center"}}><Icon.Trash size={'20'}/></td>
           
         </tr>
         <tr style={{textAlign:"center"}}>
           <td>3</td>
           <td>Saud</td>
           <td>i191991</td>
-          <td style={{color:"red",textAlign:"center"}}><Icon.Trash/></td>
+          <td style={{color:"red",textAlign:"center"}}><Icon.Trash size={'20'}/></td>
           
         </tr>
         <tr style={{textAlign:"center"}}>
           <td>3</td>
           <td>Mark</td>
           <td>Otto</td>
-          <td style={{color:"red",textAlign:"center"}}><Icon.Trash/></td>
+          <td style={{color:"red",textAlign:"center"}}><Icon.Trash size={'20'}/></td>
           
         </tr>
       </tbody>

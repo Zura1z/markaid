@@ -32,11 +32,11 @@ function TeacherClassroom() {
         layout={layout}
         cols={8}
         rowHeight={90}
-        width={2300}
-        margin={[500,70]}
+        width={2000}
+        margin={[350,70]}
       >
         <div key="a" style={{ padding: '20px' }}>
-        <Card style={{ width: '28rem' }}>
+        <Card style={{ width: '25rem' }}>
         <Card.Body>
           <Card.Title>Object Oriented Programing</Card.Title>
           <Card.Text>
@@ -44,14 +44,16 @@ function TeacherClassroom() {
           </Card.Text>
           <Addstudent/>
           {'   '}
-          <Button style={{ backgroundColor: "#836eaa",borderColor:"white" }}>Open Classroom</Button>
+          <Button style={{ backgroundColor: "#b71c1c",borderColor:"white" }}><Icon.XLg size={'20'}/></Button>
           {'   '}
-          <Button style={{ backgroundColor: "#b71c1c",borderColor:"white" }}>Delete Classroom</Button>
+          <Button style={{ backgroundColor: "#836eaa",borderColor:"white" }}>Open Classroom</Button>
+         
+          
         </Card.Body>
       </Card>
         </div>
         <div key="b" style={{ padding: '20px' }}>
-        <Card style={{ width: '28rem' }}>
+        <Card style={{ width: '25rem' }}>
         <Card.Body>
           <Card.Title>Object Oriented Programing</Card.Title>
           <Card.Text>
@@ -59,14 +61,16 @@ function TeacherClassroom() {
           </Card.Text>
           <Addstudent/>
           {'   '}
-          <Button style={{ backgroundColor: "#836eaa",borderColor:"white" }}>Open Classroom</Button>
+          <Button style={{ backgroundColor: "#b71c1c",borderColor:"white" }}><Icon.XLg size={'20'}/></Button>
           {'   '}
-          <Button style={{ backgroundColor: "#b71c1c",borderColor:"white" }}>Delete Classroom</Button>
+          <Button style={{ backgroundColor: "#836eaa",borderColor:"white" }}>Open Classroom</Button>
+         
+          
         </Card.Body>
       </Card>
         </div>
         <div key="c" style={{ padding: '20px' }}>
-        <Card style={{ width: '28rem' }}>
+        <Card style={{ width: '25rem' }}>
         <Card.Body>
           <Card.Title>Object Oriented Programing</Card.Title>
           <Card.Text>
@@ -74,14 +78,16 @@ function TeacherClassroom() {
           </Card.Text>
           <Addstudent/>
           {'   '}
-          <Button style={{ backgroundColor: "#836eaa",borderColor:"white" }}>Open Classroom</Button>
+          <Button style={{ backgroundColor: "#b71c1c",borderColor:"white" }}><Icon.XLg size={'20'}/></Button>
           {'   '}
-          <Button style={{ backgroundColor: "#b71c1c",borderColor:"white" }}>Delete Classroom</Button>
+          <Button style={{ backgroundColor: "#836eaa",borderColor:"white" }}>Open Classroom</Button>
+         
+          
         </Card.Body>
       </Card>
         </div>
         <div key="D" style={{ padding: '20px' }}>
-        <Card style={{ width: '28rem' }}>
+        <Card style={{ width: '25rem' }}>
         <Card.Body>
           <Card.Title>Object Oriented Programing</Card.Title>
           <Card.Text>
@@ -89,26 +95,28 @@ function TeacherClassroom() {
           </Card.Text>
           <Addstudent/>
           {'   '}
-          <Button style={{ backgroundColor: "#836eaa",borderColor:"white" }}>Open Classroom</Button>
+          <Button style={{ backgroundColor: "#b71c1c",borderColor:"white" }}><Icon.XLg size={'20'}/></Button>
           {'   '}
-          <Button style={{ backgroundColor: "#b71c1c",borderColor:"white" }}>Delete Classroom</Button>
+          <Button style={{ backgroundColor: "#836eaa",borderColor:"white" }}>Open Classroom</Button>
+         
+          
         </Card.Body>
       </Card>
       </div>
       <div key="e" style={{ padding: '20px' }}>
-      <Card style={{ width: '28rem' }}>
+      <Card style={{ width: '25rem' }}>
         <Card.Body>
           <Card.Title>Object Oriented Programing</Card.Title>
           <Card.Text>
             Programing Fall 2022
           </Card.Text>
-          
-          {/* <Icon.PersonAdd size={"30"} style={{ color:"white", backgroundColor: "#880e4f", borderRadius:"10px" ,borderColor:"white"}}/> */}
           <Addstudent/>
           {'   '}
-          <Button style={{ backgroundColor: "#836eaa",borderColor:"white" }}>Open Classroom</Button>
+          <Button style={{ backgroundColor: "#b71c1c",borderColor:"white" }}><Icon.XLg size={'20'}/></Button>
           {'   '}
-          <Button style={{ backgroundColor: "#b71c1c",borderColor:"white" }}>Delete Classroom</Button>
+          <Button style={{ backgroundColor: "#836eaa",borderColor:"white" }}>Open Classroom</Button>
+         
+          
         </Card.Body>
       </Card>
       </div>

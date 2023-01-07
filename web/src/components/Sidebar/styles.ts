@@ -23,7 +23,7 @@ export const Content = styled.div`
 export const ClosedSideBar = styled.header`
 	max-width: 60px;
 	width: 100%;
-	height: 100%;
+	height: 70%;
 	
 
 	background: var(--second-background);
@@ -172,7 +172,7 @@ export const ClosedSideBar = styled.header`
 `;
 
 export const OpenSideBar = styled.header`
-	height: 100%;
+	height: 85%;
 	width: 15%;
 
 	position: fixed;

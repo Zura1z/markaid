@@ -12,7 +12,7 @@ import {
 
 export default function Footer() {
   return (
-    <MDBFooter  style={{ marginLeft: "8%",backgroundColor: '#836eaa' ,bottom: 0,position:"fixed",width:"100%"}}>
+    <MDBFooter  style={{ backgroundColor: '#4e2a84' ,bottom: 0,position:"fixed",width:"100%"}}>
       <MDBContainer className='p-4 pb-0'>
         <section className=''>
           <p className='d-flex justify-content-center align-items-center'>
@@ -24,7 +24,7 @@ export default function Footer() {
         </section>
       </MDBContainer>
 
-      <div className='text-center p-3' style={{ backgroundColor: "#836eaa" ,color:"white"}}>
+      <div className='text-center p-3' style={{ backgroundColor: "#4e2a84" ,color:"white"}}>
         MarkAid:
         <a  href='https://mdbootstrap.com/' style={{color:"white"}}>
             An Intelligent Learning Platform

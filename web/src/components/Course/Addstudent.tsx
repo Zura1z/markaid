@@ -13,7 +13,7 @@ function Addstudent() {
   return (
     <>
       <Button onClick={handleShow} style={{backgroundColor:"#880e4f",borderColor:"white" }}>
-      <Icon.PersonAdd size={"30"} style={{ color:"white", backgroundColor: "#880e4f", borderRadius:"10px" ,borderColor:"white"}}></Icon.PersonAdd>
+      <Icon.PersonAdd size={"20"} style={{ color:"white", backgroundColor: "#880e4f", borderRadius:"10px" ,borderColor:"white"}}></Icon.PersonAdd>
       </Button>
 
       <Modal show={show} onHide={handleClose}>

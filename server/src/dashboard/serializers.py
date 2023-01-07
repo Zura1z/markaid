@@ -1,8 +1,6 @@
-from django.contrib.auth.models import User
-
 from rest_framework import serializers
 
-from .models import Course, Quiz, Question, Answer
+from .models import User, Course, Quiz, Question, Answer
 
 
 class UserSerializer(serializers.ModelSerializer):

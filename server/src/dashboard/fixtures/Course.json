@@ -48,5 +48,15 @@
             "teacher": 5,  
             "students": [16, 17, 18]
         }
+    },
+    {        
+        "model": "dashboard.Course",        
+        "pk": 6,        
+        "fields": {            
+            "title": "Introduction to Python",            
+            "description": "Learn the fundamentals of Python programming.",            
+            "teacher": 1,              
+            "students": [12, 13, 14] 
+        }
     }
 ]

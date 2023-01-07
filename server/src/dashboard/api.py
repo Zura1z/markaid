@@ -1,5 +1,6 @@
 from rest_framework import viewsets, status
 from rest_framework.response import Response
+from rest_framework.decorators import action
 
 from django.shortcuts import render, redirect
 from django.contrib.auth import login as auth_login
@@ -14,7 +15,15 @@ from .serializers import UserSerializer, CourseSerializer, QuizSerializer, Quest
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
-
+    
+    
+    @action(methods=['get'], detail=True)
+    def get_user(self, request, *args, **kwargs):
+        user_id = kwargs['pk']
+        user = User.objects.get(pk=user_id)
+        serializer = UserSerializer(user)
+        return Response(serializer.data)
+    
 class CourseViewSet(viewsets.ModelViewSet):
     queryset = Course.objects.all()
     serializer_class = CourseSerializer
@@ -25,13 +34,38 @@ class CourseViewSet(viewsets.ModelViewSet):
         serializer = self.get_serializer(courses, many=True)
         return Response(serializer.data)
 
-    # def create(self, request):
-    #     # Handle POST request to create a course
-    #     serializer = self.get_serializer(data=request.data)
-    #     if serializer.is_valid():
-    #         serializer.save()
-    #         return Response(serializer.data, status=status.HTTP_201_CREATED)
-    #     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    @action(methods=['get'], detail=True)
+    def get_course(self, request, *args, **kwargs):
+        course_id = kwargs['pk']
+        course = Course.objects.get(pk=course_id)
+        serializer = CourseSerializer(course)
+        return Response(serializer.data)
+    
+    @action(methods=['get'], detail=False)
+    def list_by_teacher(self, request, *args, **kwargs):
+        teacher_id = request.query_params.get('teacher_id', None)
+        if teacher_id:
+            courses = self.get_queryset().filter(teacher=teacher_id)
+            serializer = self.get_serializer(courses, many=True)
+            return Response(serializer.data)
+        else:
+            return Response({"error": "Teacher id is required."}, status=status.HTTP_400_BAD_REQUEST)
+    
+    @action(methods=['get'], detail=False)
+    def list_by_student(self, request, *args, **kwargs):
+        student_id = request.query_params.get('student_id', None)
+        if student_id:
+            courses = self.get_queryset().filter(students=student_id)
+            serializer = self.get_serializer(courses, many=True)
+            return Response(serializer.data)
+        else:
+            return Response({"error": "Student id is required."}, status=status.HTTP_400_BAD_REQUEST)
+
+    def destroy(self, request, *args, **kwargs):
+        course = self.get_object()
+        course.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
 
 class QuizViewSet(viewsets.ModelViewSet):
     queryset = Quiz.objects.all()

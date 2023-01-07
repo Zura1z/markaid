@@ -5,17 +5,23 @@ import { BrowserRouter } from "react-router-dom";
 
 import { SideBar } from "./components/Sidebar/Sidebar";
 
-import { BasicExample } from "./components/ScrollableCard/ScrollCard";
+
+import ExamDetails from "./components/CreateExam/ExamsDetails";
+import Footer from "./components/Footer/Footer";
+import StudentExam from "./components/CreateExam/StudentExam";
 
 ReactDOM.render(
   <>
-    <React.StrictMode>
+    {/* <React.StrictMode>
       <BrowserRouter>
-        {/* <Main /> */}
+        
         <SideBar />
         <BasicExample />
       </BrowserRouter>
-    </React.StrictMode>
+    </React.StrictMode> */}
+    <SideBar/>
+    <ExamDetails/>
+    <Footer/>
     ,
   </>,
   document.getElementById("root")

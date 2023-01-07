@@ -5,6 +5,7 @@ import '/node_modules/react-resizable/css/styles.css';
 import Button from 'react-bootstrap/Button';
 // import {0-circle-fill  } from 'react-bootstrap-icons'
 import * as Icon from 'react-bootstrap-icons';
+import StudentExam from './StudentExam';
 function ExamDetails() {
   return (
     <>
@@ -40,9 +41,13 @@ function ExamDetails() {
           <td>1</td>
           <td>Bilal Ahmed</td>
           <td>50</td>
-          <Button style={{borderColor:"white" }}>
+          <td>
+          <StudentExam/>
+          </td>
+          {/* <Button style={{borderColor:"white" }}>
+
           <td  style={{color:"red",textAlign:"center"}} ><Icon.BoxArrowInUpRight size={'20'}/></td>
-          </Button>
+          </Button> */}
           
           
         </tr>
@@ -51,9 +56,9 @@ function ExamDetails() {
           <td>Zuraiz Zahoor</td>
           <td>60</td>
           
-          <Button style={{borderColor:"white" }}>
-          <td  style={{color:"red",textAlign:"center"}} ><Icon.BoxArrowInUpRight size={'20'}/></td>
-          </Button>
+          <td>
+          <StudentExam/>
+          </td>
           
         </tr>
         

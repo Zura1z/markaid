@@ -12,8 +12,8 @@ class Course(models.Model):
     # Fields for course model
     title = models.CharField(max_length=255)
     description = models.TextField()
-    teacher = models.ForeignKey(User, on_delete=models.CASCADE, related_name='courses_teaching')
-    students = models.ManyToManyField(User, related_name='courses_enrolled')
+    teacher = models.ForeignKey(User, on_delete=models.CASCADE, related_name='courses_teaching', limit_choices_to={'is_teacher': True})
+    students = models.ManyToManyField(User, related_name='courses_enrolled', limit_choices_to={'is_teacher': False})
 
 class Quiz(models.Model):
     # Fields for quiz model

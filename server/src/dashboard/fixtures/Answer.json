@@ -1,0 +1,349 @@
+[
+    {
+        "model": "dashboard.Answer",
+        "pk": 1,
+        "fields": {
+            "question": 1,
+            "text": "def function_name():",
+            "is_correct": true
+        }
+    },
+    {
+        "model": "dashboard.Answer",
+        "pk": 2,
+        "fields": {
+            "question": 1,
+            "text": "function function_name():",
+            "is_correct": false
+        }
+    },
+    {
+        "model": "dashboard.Answer",
+        "pk": 3,
+        "fields": {
+            "question": 1,
+            "text": "function_name():",
+            "is_correct": false
+        }
+    },
+    {
+        "model": "dashboard.Answer",
+        "pk": 4,
+        "fields": {
+            "question": 2,
+            "text": "class",
+            "is_correct": false
+        }
+    },
+    {
+        "model": "dashboard.Answer",
+        "pk": 5,
+        "fields": {
+            "question": 2,
+            "text": "function",
+            "is_correct": false
+        }
+    },
+    {
+        "model": "dashboard.Answer",
+        "pk": 6,
+        "fields": {
+            "question": 2,
+            "text": "variable",
+            "is_correct": true
+        }
+    },
+    {
+        "model": "dashboard.Answer",
+        "pk": 7,
+        "fields": {
+            "question": 3,
+            "text": "True",
+            "is_correct": true
+        }
+    },
+    {
+        "model": "dashboard.Answer",
+        "pk": 8,
+        "fields": {
+            "question": 3,
+            "text": "False",
+            "is_correct": false
+        }
+    },
+    {
+        "model": "dashboard.Answer",
+        "pk": 9,
+        "fields": {
+            "question": 4,
+            "text": "django-admin startproject project_name",
+            "is_correct": true
+        }
+    },
+    {
+        "model": "dashboard.Answer",
+        "pk": 10,
+        "fields": {
+            "question": 5,
+            "text": "Models",
+            "is_correct": false
+        }
+    },
+    {
+        "model": "dashboard.Answer",
+        "pk": 11,
+        "fields": {
+            "question": 5,
+            "text": "Views",
+            "is_correct": false
+        }
+    },
+    {
+        "model": "dashboard.Answer",
+        "pk": 12,
+        "fields": {
+            "question": 5,
+            "text": "Templates",
+            "is_correct": false
+        }
+    },
+    {
+        "model": "dashboard.Answer",
+        "pk": 13,
+        "fields": {
+            "question": 5,
+            "text": "Routers",
+            "is_correct": true
+        }
+    },
+    {
+        "model": "dashboard.Answer",
+        "pk": 14,
+        "fields": {
+            "question": 6,
+            "text": "True",
+            "is_correct": true
+        }
+    },
+    {
+        "model": "dashboard.Answer",
+        "pk": 15,
+        "fields": {
+            "question": 6,
+            "text": "False",
+            "is_correct": false
+        }
+    },
+    {
+        "model": "dashboard.Answer",
+        "pk": 16,
+        "fields": {
+            "question": 7,
+            "text": "pd.read_csv('file.csv')",
+            "is_correct": true
+        }
+    },
+    {
+        "model": "dashboard.Answer",
+        "pk": 17,
+        "fields": {
+            "question": 7,
+            "text": "pd.read_csv('file.csv', header=None)",
+            "is_correct": false
+        }
+    },
+    {
+        "model": "dashboard.Answer",
+        "pk": 18,
+        "fields": {
+            "question": 8,
+            "text": "Series",
+            "is_correct": false
+        }
+    },
+    {
+        "model": "dashboard.Answer",
+        "pk": 19,
+        "fields": {
+            "question": 8,
+            "text": "DataFrame",
+            "is_correct": false
+        }
+    },
+    {
+        "model": "dashboard.Answer",
+        "pk": 20,
+        "fields": {
+            "question": 8,
+            "text": "Array",
+            "is_correct": true
+        }
+    },
+    {
+        "model": "dashboard.Answer",
+        "pk": 21,
+        "fields": {
+            "question": 9,
+            "text": "True",
+            "is_correct": true
+        }
+    },
+    {
+        "model": "dashboard.Answer",
+        "pk": 22,
+        "fields": {
+            "question": 9,
+            "text": "False",
+            "is_correct": false
+        }
+    },
+    {
+        "model": "dashboard.Answer",
+        "pk": 23,
+        "fields": {
+            "question": 10,
+            "text": "&lt;LinearLayout&gt;",
+            "is_correct": true
+        }
+    },
+    {
+        "model": "dashboard.Answer",
+        "pk": 24,
+        "fields": {
+            "question": 10,
+            "text": "&lt;layout&gt;",
+            "is_correct": false
+        }
+    },
+    {
+        "model": "dashboard.Answer",
+        "pk": 25,
+        "fields": {
+            "question": 10,
+            "text": "&lt;view&gt;",
+            "is_correct": false
+        }
+    },
+    {
+        "model": "dashboard.Answer",
+        "pk": 26,
+        "fields": {
+            "question": 11,
+            "text": "ConstraintLayout",
+            "is_correct": false
+        }
+    },
+    {
+        "model": "dashboard.Answer",
+        "pk": 27,
+        "fields": {
+            "question": 11,
+            "text": "FrameLayout",
+            "is_correct": false
+        }
+    },
+    {
+        "model": "dashboard.Answer",
+        "pk": 28,
+        "fields": {
+            "question": 11,
+            "text": "AbsoluteLayout",
+            "is_correct": true
+        }
+    },
+    {
+        "model": "dashboard.Answer",
+        "pk": 29,
+        "fields": {
+            "question": 12,
+            "text": "True",
+            "is_correct": true
+        }
+    },
+    {
+        "model": "dashboard.Answer",
+        "pk": 30,
+        "fields": {
+            "question": 12,
+            "text": "False",
+            "is_correct": false
+        }
+    },
+    {
+        "model": "dashboard.Answer",
+        "pk": 31,
+        "fields": {
+            "question": 13,
+            "text": "Storing and manipulating data",
+            "is_correct": true
+        }
+    },
+    
+    {
+        "model": "dashboard.Answer",
+        "pk": 32,
+        "fields": {
+            "question": 13,
+            "text": "Front-end web development",
+            "is_correct": false
+        }
+    },
+    {
+        "model": "dashboard.Answer",
+        "pk": 33,
+        "fields": {
+            "question": 13,
+            "text": "Server-side web development",
+            "is_correct": false
+        }
+    },
+    {
+        "model": "dashboard.Answer",
+        "pk": 34,
+        "fields": {
+            "question": 14,
+            "text": "True",
+            "is_correct": true
+        }
+    },
+    {
+        "model": "dashboard.Answer",
+        "pk": 35,
+        "fields": {
+            "question": 14,
+            "text": "False",
+            "is_correct": false
+        }
+    },
+    {
+        "model": "dashboard.Answer",
+        "pk": 36,
+        "fields": {
+            "question": 15,
+            "text": "Java",
+            "is_correct": false
+        }
+    },
+    {
+        "model": "dashboard.Answer",
+        "pk": 37,
+        "fields": {
+            "question": 15,
+            "text": "Python",
+            "is_correct": false
+        }
+    },
+    {
+        "model": "dashboard.Answer",
+        "pk": 38,
+        "fields": {
+            "question": 15,
+            "text": "C++",
+            "is_correct": true
+        }
+    }
+]
+
+
+        
+

@@ -1,0 +1,42 @@
+[
+    {
+        "model": "dashboard.Quiz",
+        "pk": 1,
+        "fields": {
+            "title": "Python Fundamentals Quiz",
+            "course": 1  
+        }
+    },
+    {
+        "model": "dashboard.Quiz",
+        "pk": 2,
+        "fields": {
+            "title": "Django Basics Quiz",
+            "course": 2  
+        }
+    },
+    {
+        "model": "dashboard.Quiz",
+        "pk": 3,
+        "fields": {
+            "title": "Data Science Quiz",
+            "course": 3  
+        }
+    },
+    {
+        "model": "dashboard.Quiz",
+        "pk": 4,
+        "fields": {
+            "title": "Android App Development Quiz",
+            "course": 4  
+        }
+    },
+    {
+        "model": "dashboard.Quiz",
+        "pk": 5,
+        "fields": {
+            "title": "Computer Science Fundamentals Quiz",
+            "course": 5  
+        }
+    }
+]

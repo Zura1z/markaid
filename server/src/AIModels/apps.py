@@ -31,8 +31,8 @@ class AimodelsConfig(AppConfig):
         #tokenizer.save_pretrained("./AIModels/models/distilbert-base-uncased-distilled-squad/tokenizer/")
 
         #Locally load the model and tokenizer
-        model = DistilBertForQuestionAnswering.from_pretrained('./AIModels/models/distilbert-base-uncased-distilled-squad/model/')        
-        tokenizer = DistilBertTokenizer.from_pretrained('./AIModels/models/distilbert-base-uncased-distilled-squad/tokenizer/')
+        model = DistilBertForQuestionAnswering.from_pretrained('./src/AIModels/models/distilbert-base-uncased-distilled-squad/model/')        
+        tokenizer = DistilBertTokenizer.from_pretrained('./src/AIModels/models/distilbert-base-uncased-distilled-squad/tokenizer/')
         encoding = tokenizer.encode_plus(question, context)
         input_ids, attention_mask = encoding["input_ids"], encoding["attention_mask"]
         start_scores, end_scores = model(torch.tensor([input_ids]), attention_mask=torch.tensor([attention_mask]), return_dict=False)

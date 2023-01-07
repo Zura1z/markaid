@@ -4,11 +4,8 @@ import "/node_modules/react-grid-layout/css/styles.css";
 import "/node_modules/react-resizable/css/styles.css";
 import Button from "react-bootstrap/Button";
 import * as Icon from "react-bootstrap-icons";
-import axios from "axios";
 
 import React, { useState, useEffect } from "react";
-
-import { QARequestData } from "../../api/types";
 
 import { makeQARequest } from "../../api/apiClient";
 

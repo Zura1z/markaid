@@ -2,24 +2,33 @@ from django.contrib.auth.models import User
 
 from rest_framework import serializers
 
-from .models import Account, Course
+from .models import Course, Quiz, Question, Answer
 
 
 class UserSerializer(serializers.ModelSerializer):
-    """ User model Serializer """
-
     class Meta:
         model = User
-        fields = ['id', 'username', 'email', 'first_name', 'last_name']
-
-class AccountSerializer(serializers.ModelSerializer):
-    """ Account model Serializer """
-
-    class Meta:
-        model = Account
-        fields = ['id', 'username', 'email', 'platform']
+        fields = ('id', 'first_name', 'last_name', 'email', 'is_teacher')
 
 class CourseSerializer(serializers.ModelSerializer):
+    teacher = UserSerializer(read_only=True)
+    students = UserSerializer(many=True, read_only=True)
     class Meta:
         model = Course
-        fields = ('id', 'title', 'description', 'active', 'noOfStudents')
+        fields = ('id', 'title', 'description', 'teacher', 'students')
+
+class QuizSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Quiz
+        fields = ('id', 'title', 'course')
+
+class QuestionSerializer(serializers.ModelSerializer):
+    answers = serializers.StringRelatedField(many=True)
+    class Meta:
+        model = Question
+        fields = ('id', 'quiz', 'text', 'type', 'answers')
+
+class AnswerSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Answer
+        fields = ('id', 'question', 'text', 'is_correct')

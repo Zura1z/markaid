@@ -1,3 +1,10 @@
+.PHONY: all
+all:
+	$(MAKE) clean
+	$(MAKE) migrate
+	$(MAKE) superuser
+	$(MAKE) run
+
 .PHONY: run
 run:
 	python src/manage.py runserver
@@ -13,11 +20,17 @@ migrate:
 	python src/manage.py makemigrations
 	python src/manage.py makemigrations dashboard
 	python src/manage.py migrate 
-	# $(MAKE) loadfixtures
+	$(MAKE) loadfixtures
 
 
-# .PHONY: loadfixtures
-# loadfixtures: 
+.PHONY: loadfixtures
+loadfixtures: 
+	python src/manage.py loaddata Teacher
+	python src/manage.py loaddata Student
+	python src/manage.py loaddata Course
+	python src/manage.py loaddata Quiz
+	python src/manage.py loaddata Question
+	python src/manage.py loaddata Answer
 	
 .PHONY: clean
 clean: 

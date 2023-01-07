@@ -1,60 +1,75 @@
-from django.conf import settings
+from rest_framework import viewsets, status
+from rest_framework.response import Response
 
-from rest_framework.views import APIView, Response
-from rest_framework.permissions import IsAuthenticated
+from django.shortcuts import render, redirect
+from django.contrib.auth import login as auth_login
+from django.contrib.auth import authenticate, login, logout
 
-from .serializers import CourseSerializer
-from .models import Course
+from django.contrib.auth.forms import UserCreationForm
 
+from .models import User, Course, Quiz, Question, Answer, LoginForm
 
-def sanitize_string(s):
-    return s.strip().lower()
+from .serializers import UserSerializer, CourseSerializer, QuizSerializer, QuestionSerializer, AnswerSerializer
 
-def response(data, error=""):
-    return Response(dict(
-        error=error,
-        data=data,
-    ))
+class UserViewSet(viewsets.ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
 
-# Create another endpoint to create a new course data (POST) (authenticated)
-class CreateCourseAPIView(APIView):
-    """ Test Course API. """
+class CourseViewSet(viewsets.ModelViewSet):
+    queryset = Course.objects.all()
+    serializer_class = CourseSerializer
 
-    # read in post data
-    def post(self, request, format=None):
-        course_data = request.data
-        print(course_data)
-        try:
-            # sanitize fields from post data
-            title = sanitize_string(course_data["title"])
-            active = course_data["active"]
-            noOfStudents = course_data["noOfStudents"]
-            description = sanitize_string(course_data["description"])
-        except KeyError:
-            return response(None, "Missing fields")
-        print(title, active, noOfStudents, description)
-        course_model = Course.create(
-            title=title,
-            active=active,
-            noOfStudents=noOfStudents,
-            description=description,
-        )
-
-        return response(CourseSerializer(course_model).data)
-    
-    def get(self, request, format=None):
-        couse = Course.objects.all()
-        serializer = CourseSerializer(couse, many=True)
+    def list(self, request):
+        # Handle GET request to list courses
+        courses = self.get_queryset()
+        serializer = self.get_serializer(courses, many=True)
         return Response(serializer.data)
 
+    # def create(self, request):
+    #     # Handle POST request to create a course
+    #     serializer = self.get_serializer(data=request.data)
+    #     if serializer.is_valid():
+    #         serializer.save()
+    #         return Response(serializer.data, status=status.HTTP_201_CREATED)
+    #     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-# TODO: Create one to list all course data (filterable) (pagination) (GET) (authenticated)
-class ListCourseAPIView(APIView):
-    """ Test Outreach API. """
+class QuizViewSet(viewsets.ModelViewSet):
+    queryset = Quiz.objects.all()
+    serializer_class = QuizSerializer
 
-    serializer_class = CourseSerializer
-    # authentication_classes = [IsAuthenticated]
+class QuestionViewSet(viewsets.ModelViewSet):
+    queryset = Question.objects.all()
+    serializer_class = QuestionSerializer
 
-    def get(self, request, format=None):
-        courseList = Course.objects.all()
-        return response(CourseSerializer(courseList, many=True).data)
+class AnswerViewSet(viewsets.ModelViewSet):
+    queryset = Answer.objects.all()
+    serializer_class = AnswerSerializer
+
+def signup(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            auth_login(request, user)
+            return redirect('home')
+    else:
+        form = UserCreationForm()
+    return render(request, 'signup.html', {'form': form})
+
+def login(request):
+    if request.method == 'POST':
+        form = LoginForm(request.POST)
+        if form.is_valid():
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password']
+            user = authenticate(request, username=username, password=password)
+            if user is not None:
+                login(request, user)
+                return redirect('home')
+    else:
+        form = LoginForm()
+    return render(request, 'login.html', {'form': form})
+
+def logout(request):
+    logout(request)
+    return redirect('login')

@@ -1,36 +1,43 @@
 from django.db import models
+from django import forms
 
-class Account(models.Model):
-    name = models.CharField(max_length=100)
-    email = models.EmailField()
-    username = models.CharField(max_length=100)
-
-    def __str__(self):
-        return self.name
-
-# class StudentAccount(Account):
-#     account = models.ForeignKey(Account, on_delete=models.CASCADE)
-
-#     def __str__(self):
-#         return self.name
-
-# class TeacherAccount(Account):
-#     name = models.CharField(max_length=100)
-#     email = models.EmailField()
-
-#     def __str__(self):
-#         return self.name
+class User(models.Model):
+    # Fields for user model
+    first_name = models.CharField(max_length=255)
+    last_name = models.CharField(max_length=255)
+    email = models.EmailField(unique=True)
+    is_teacher = models.BooleanField(default=False)
 
 class Course(models.Model):
-    title = models.CharField(max_length=120)
+    # Fields for course model
+    title = models.CharField(max_length=255)
     description = models.TextField()
-    active = models.BooleanField(default=False)
-    noOfStudents = models.IntegerField(default=0)
+    teacher = models.ForeignKey(User, on_delete=models.CASCADE, related_name='courses_teaching')
+    students = models.ManyToManyField(User, related_name='courses_enrolled')
 
-    def _str_(self):
-        return self.title
-    
-    def create(title, active, noOfStudents, description):
-        course = Course(title=title, active=active, noOfStudents=noOfStudents, description=description)
-        course.save()
-        return course
+class Quiz(models.Model):
+    # Fields for quiz model
+    title = models.CharField(max_length=255)
+    course = models.ForeignKey(Course, on_delete=models.CASCADE, related_name='quizzes')
+
+class Question(models.Model):
+    # Fields for question model
+    quiz = models.ForeignKey(Quiz, on_delete=models.CASCADE, related_name='questions')
+    text = models.TextField()
+    # You could use a choices field to specify the different question types
+    TYPE_CHOICES = (
+        ('multiple_choice', 'Multiple Choice'),
+        ('true_false', 'True/False'),
+        ('short_answer', 'Short Answer'),
+    )
+    type = models.CharField(max_length=20, choices=TYPE_CHOICES)
+
+class Answer(models.Model):
+    # Fields for answer model
+    question = models.ForeignKey(Question, on_delete=models.CASCADE, related_name='answers')
+    text = models.TextField()
+    is_correct = models.BooleanField()
+
+class LoginForm(forms.Form):
+    username = forms.CharField(max_length=100)
+    password = forms.CharField(widget=forms.PasswordInput)

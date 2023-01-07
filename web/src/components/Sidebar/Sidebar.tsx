@@ -12,19 +12,14 @@ export function SideBar() {
     setSideBar((prevState) => !prevState);
   }
   return (
-    <Container style={{ backgroundColor: "black" }}>
+    <Container style={{ backgroundColor: "#b6acd1" }}>
       <Content>
        
-          <OpenSideBar style={{ backgroundColor: "#1b1919" }}>
+          <OpenSideBar style={{ backgroundColor: "#836eaa" ,borderRadius:"13px"}}>
             <section>
               <nav>
                 <span>
-                  <button
-                    onClick={handleChangeSideBar}
-                    style={{ backgroundColor: "transparent" }}
-                  >
-                    <Icon.ArrowLeft size={"20"} style={{ color: "white" }} />
-                  </button>
+                 
                 </span>
                 <div>
                   <h1>logo </h1>
@@ -34,7 +29,7 @@ export function SideBar() {
                 <div>
                   <ul>
                     <a href="/">
-                      <Icon.CardText style={{ color: "#836eaa" }} />
+                      <Icon.CardText style={{ color: "white" }} />
                       <p
                         style={{
                           fontSize: "20px",
@@ -46,36 +41,36 @@ export function SideBar() {
                       </p>
                     </a>
                     <a href="/" title="Alguma coisa">
-                      <Icon.ChatFill style={{ color: "#836eaa" }} />
+                      <Icon.ChatFill style={{ color: "white" }} />
                       <p
                         style={{
                           fontSize: "20px",
                           color: "white",
-                          fontFamily: "fantasy",
+                          fontFamily: "cursive",
                         }}
                       >
                         Q&A
                       </p>
                     </a>
                     <a href="/" title="Alguma coisa">
-                      <Icon.CardChecklist style={{ color: "#836eaa" }} />
+                      <Icon.CardChecklist style={{ color: "white" }} />
                       <p
                         style={{
                           fontSize: "20px",
                           color: "white",
-                          fontFamily: "monospace",
+                          fontFamily: "cursive",
                         }}
                       >
                         Quiz
                       </p>
                     </a>
                     <a href="/" title="Alguma coisa">
-                      <Icon.Flag style={{ color: "#836eaa" }} />
+                      <Icon.Flag style={{ color: "white" }} />
                       <p
                         style={{
                           fontSize: "20px",
                           color: "white",
-                          fontFamily: "sans-serif",
+                          fontFamily: "cursive",
                         }}
                       >
                         Feedback
@@ -88,24 +83,24 @@ export function SideBar() {
                 {/* Icones que pode não ser tão principais no app */}
                 <ul style={{ marginLeft: "22%" }}>
                   <a href="/" style={{ fontFamily: "Abril Fatface" }}>
-                    <Icon.Sliders style={{ color: "#836eaa" }} />
+                    <Icon.Sliders style={{ color: "white" }} />
                     <p
                       style={{
                         fontSize: "20px",
                         color: "white",
-                        fontFamily: "revert-layer",
+                        fontFamily: "cursive",
                       }}
                     >
                       Setting
                     </p>
                   </a>
                   <a href="/">
-                    <Icon.PersonCircle style={{ color: "#836eaa" }} />
+                    <Icon.PersonCircle style={{ color: "white" }} />
                     <p
                       style={{
                         fontSize: "20px",
                         color: "white",
-                        fontFamily: "serif",
+                        fontFamily: "cursive",
                       }}
                     >
                       Profile

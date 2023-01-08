@@ -55,29 +55,29 @@ function QuestionAnswer() {
 
   return (
     <>
-      <div style={{ marginLeft: "50px", marginTop: "50px", color: "#4e2a84" }}>
+      <div style={{ marginLeft: "17%", marginTop: "50px", color: "#4e2a84" }}>
         <Button variant="outline-secondary" style={{ color: "#4e2a84" }}>
           <Icon.ArrowLeft size={"20"} />
           Back
         </Button>
       </div>
-      <div style={{ padding: "40px" }}>
+      <div style={{ padding: "40px",marginLeft:"18%" }}>
         <h1 style={{ color: "#4e2a84" }}>Intelligent Q&A Agent</h1>
       </div>
-      <div style={{ padding: "40px" }}>
+      <div style={{ padding: "20px" ,marginLeft:"17%"}}>
         <Form
           style={{
             padding: "40px",
-            backgroundColor: "#b6acd1",
+            backgroundColor: "#e4e0ee",
             borderRadius: "13px",
           }}
         >
           <Form.Group
             className="mb-3"
             controlId="exampleForm.ControlTextarea1"
-            style={{ color: "#4e2a84" }}
+            style={{ color: "white" }}
           >
-            <Form.Label>Context</Form.Label>
+            <Form.Label style={{color:"#4e2a84"}}>Context</Form.Label>
             <Form.Control
               as="textarea"
               placeholder="Context"
@@ -92,7 +92,7 @@ function QuestionAnswer() {
             controlId="exampleForm.ControlInput1"
             style={{ color: "#4e2a84" }}
           >
-            <Form.Label>Question</Form.Label>
+            <Form.Label style={{color:"#4e2a84"}}>Question</Form.Label>
             <Form.Control
               type="question"
               placeholder="Question"
@@ -117,7 +117,7 @@ function QuestionAnswer() {
             controlId="exampleForm.ControlInput1"
             style={{ color: "#4e2a84" }}
           >
-            <Form.Label>Answer</Form.Label>
+            <Form.Label style={{color:"#4e2a84"}}>Answer</Form.Label>
             <Form.Control type="answer" placeholder={answer}></Form.Control>
           </Form.Group>
         </Form>

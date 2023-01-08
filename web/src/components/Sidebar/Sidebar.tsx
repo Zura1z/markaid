@@ -14,6 +14,7 @@ export function SideBar() {
   return (
     <Container style={{ backgroundColor: "#b6acd1" }}>
       <Content>
+
         <OpenSideBar
           style={{ backgroundColor: "#836eaa", borderRadius: "13px" }}
         >

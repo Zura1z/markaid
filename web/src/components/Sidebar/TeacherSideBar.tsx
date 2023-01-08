@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { Container, Content, ClosedSideBar, OpenSideBar } from "./styles";
+import { Container, Content,OpenSideBar } from "./styles";
 
 // import { BsLockFill } from "react-icons/bs";
 
@@ -47,6 +47,7 @@ export function TeacherSideBar() {
                           fontSize: "20px",
                           color: "white",
                           fontFamily: "cursive",
+                          borderColor:"white"
                         }}
                       >
                         

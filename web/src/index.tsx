@@ -12,7 +12,7 @@ ReactDOM.render(
         <SideBar />
         <Main />
       </BrowserRouter>
-    </React.StrictMode>
+      </React.StrictMode>
   </>,
   document.getElementById("root")
 );

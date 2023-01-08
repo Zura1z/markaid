@@ -7,5 +7,7 @@ export type Course = {
 export type CourseCardProps = {
   title: string;
   studentCount: number;
+  assignmentCount: number;
+  quizCount:number;
   footer: string;
 };

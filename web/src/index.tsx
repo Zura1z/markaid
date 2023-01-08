@@ -2,6 +2,11 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 // import Main from "./main";
 import { BrowserRouter } from "react-router-dom";
+import AssesmentsUI from "./components/Assesments/Assesments";
+
+
+
+
 import OpenClassroom from "./components/Course/StudentClassroom/OpenClasrrom";
 import StudentClassroom from "./components/Course/StudentClassroom/StudentClassroom";
 import ExamDetails from "./components/CreateExam/ExamsDetails";
@@ -18,7 +23,9 @@ ReactDOM.render(
       </BrowserRouter>
     </React.StrictMode> */}
     <SideBar/>
-    <OpenClassroom/>
+    {/* <AssesmentsUI/> */}
+    <AssesmentsUI/>
+    {/* <Assesment/> */}
     <Footer/>
 
     ,

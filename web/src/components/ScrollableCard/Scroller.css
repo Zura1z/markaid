@@ -1,18 +1,13 @@
 
-.container {
+.container1 {
     display: flex;
     flex-direction: row;
     height: 30vh;
+    border-color:"white"
     /* width: 30vh; */
   }
   
-  .left-col {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #ddd;
-  }
+ 
   
   .center-col {
     flex: 1;
@@ -20,13 +15,7 @@
     overflow-y: scroll;
   }
   
-  .right-col {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #e7e7e7;
-  }
+
 
 /* Define styles in a CSS file */
 .card {

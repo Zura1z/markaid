@@ -35,7 +35,7 @@ interface Course {
   }[];
 }
 
-function TeacherClassroom(props: IdProp) {
+function TeacherCourses(props: IdProp) {
   const [CoursesNo, setCoursesNo] = useState(0);
   const [resdata, setResdata] = useState<Course[]>([]);
 
@@ -159,4 +159,4 @@ function TeacherClassroom(props: IdProp) {
   );
 }
 
-export default TeacherClassroom;
+export default TeacherCourses;

@@ -15,7 +15,7 @@ import { IdProp } from "../types";
 
 import { getCoursesByTeacher } from "../api/apiClient";
 
-import { StudentSidebar } from "../components/Sidebar/StudentSidebar";
+import Layout from "../components/Layout";
 
 interface Course {
   id: number;
@@ -68,52 +68,47 @@ function TeacherCourses(props: IdProp) {
 
   return (
     <>
-      <Row>
-        <Col xs={2}>
-          <StudentSidebar />
-        </Col>
-        <Col xs={10}>
-          <div style={{ marginLeft: "35%", marginTop: "50px" }}>
-            <h1>My Courses</h1>
-          </div>
-          <div
-            style={{
-              marginLeft: "80%",
-              backgroundColor: "#4e2a84",
-              width: "15rem",
-              borderColor: "white",
-            }}
-          >
-            <AddClassroomButton />
-          </div>
+      <Layout>
+        <div style={{ marginLeft: "35%", marginTop: "50px" }}>
+          <h1>My Courses</h1>
+        </div>
+        <div
+          style={{
+            marginLeft: "80%",
+            backgroundColor: "#4e2a84",
+            width: "15rem",
+            borderColor: "white",
+          }}
+        >
+          <AddClassroomButton />
+        </div>
 
-          <Row>
-            {resdata.map((course, index) => {
-              // custom typecast
-              const { id, title, description, teacher, students } = course;
+        <Row>
+          {resdata.map((course, index) => {
+            // custom typecast
+            const { id, title, description, teacher, students } = course;
 
-              return (
-                <Col
-                  xs={12}
-                  md={12}
-                  lg={6}
-                  xl={4}
-                  className="mb-2"
-                  key={`course-key${index}`}
-                >
-                  <TeacherCourseCard
-                    id={id}
-                    title={title}
-                    description={description}
-                    teacher={teacher.id}
-                    students={students.map((student) => student.id)}
-                  />
-                </Col>
-              );
-            })}
-          </Row>
-        </Col>
-      </Row>
+            return (
+              <Col
+                xs={12}
+                md={12}
+                lg={6}
+                xl={4}
+                className="mb-2"
+                key={`course-key${index}`}
+              >
+                <TeacherCourseCard
+                  id={id}
+                  title={title}
+                  description={description}
+                  teacher={teacher.id}
+                  students={students.map((student) => student.id)}
+                />
+              </Col>
+            );
+          })}
+        </Row>
+      </Layout>
     </>
   );
 }

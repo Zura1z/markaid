@@ -7,29 +7,32 @@ import { CourseCardProps } from "../../types/index";
 
 import { Course } from "../../types/index";
 
-const layout = [
-  { i: "a", x: 0, y: 0, w: 1, h: 2, static: true },
-  { i: "b", x: 2, y: 0, w: 2, h: 2, static: true },
-  { i: "c", x: 0, y: 2, w: 1, h: 2, static: true },
-];
 const SCard = styled(Card)`
   background: white !important;
 
-  margin-left: 20% !important;
-  border-color: white;
+  margin-left: 10% !important;
+
+  border-color: black;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 `;
 
 export function ScrollCard(props: Course) {
   return (
-    <SCard style={{ width: "35rem", backgroundColor: "#836eaa" }}>
+    <SCard
+      style={{
+        width: "35rem",
+        backgroundColor: "#836eaa",
+      }}
+    >
       <Card.Body>
         <Card.Title
           style={{
-            color: "black",
+            color: "white",
+            background: "#401f68",
             textAlign: "center",
             fontWeight: "bold",
+            fontSize: "30px",
           }}
         >
           {props.title}
@@ -58,125 +61,15 @@ export function ScrollCard(props: Course) {
   );
 }
 
-function ScrollCard1(props: Course) {
-  return (
-    <>
-      <GridLayout
-        className="layout"
-        layout={layout}
-        cols={4}
-        rowHeight={180}
-        width={1700}
-        margin={[350, 70]}
-      >
-        <div key="a" style={{ padding: "20px" }}>
-          <SCard style={{ width: "35rem", backgroundColor: "#836eaa" }}>
-            {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
-            <Card.Body>
-              <Card.Title
-                style={{
-                  color: "black",
-                  textAlign: "center",
-                  fontWeight: "bold",
-                }}
-              >
-                Pak studies
-              </Card.Title>
-              <div className="container1">
-                <Card.Text
-                  className="center-col"
-                  style={{
-                    backgroundColor: "white",
-                    // borderRadius: "13px",
-                    padding: "20px",
-                    borderColor: "white",
-                  }}
-                >
-                  <CourseInfo
-                    title="Assignments"
-                    studentCount={200}
-                    assignmentCount={10}
-                    quizCount={5}
-                    footer=""
-                  />
-                  <CourseInfo
-                    title="Quizes"
-                    studentCount={200}
-                    assignmentCount={10}
-                    quizCount={5}
-                    footer=""
-                  />
-
-                  <CourseInfo
-                    title="Exams"
-                    studentCount={200}
-                    assignmentCount={10}
-                    quizCount={5}
-                    footer=""
-                  />
-                </Card.Text>
-              </div>
-            </Card.Body>
-          </SCard>
-        </div>
-        <div key="b" style={{ padding: "20px" }}>
-          <SCard style={{ width: "35rem", backgroundColor: "#836eaa" }}>
-            {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
-            <Card.Body>
-              <Card.Title
-                style={{
-                  color: "black",
-                  textAlign: "center",
-                  fontWeight: "bold",
-                }}
-              >
-                OOP
-              </Card.Title>
-              <div className="container1">
-                <Card.Text
-                  className="center-col"
-                  style={{
-                    backgroundColor: "white",
-                    // borderRadius: "13px",
-                    padding: "20px",
-                  }}
-                >
-                  <CourseInfo
-                    title="Assignments"
-                    studentCount={200}
-                    assignmentCount={10}
-                    quizCount={5}
-                    footer=""
-                  />
-                  <CourseInfo
-                    title="Quizes"
-                    studentCount={200}
-                    assignmentCount={10}
-                    quizCount={5}
-                    footer=""
-                  />
-
-                  <CourseInfo
-                    title="Exams"
-                    studentCount={200}
-                    assignmentCount={10}
-                    quizCount={5}
-                    footer=""
-                  />
-                </Card.Text>
-              </div>
-            </Card.Body>
-          </SCard>
-        </div>
-      </GridLayout>
-    </>
-  );
-}
-
 export function CourseInfo(props: CourseCardProps) {
   return (
-    <div className="card" style={{ borderColor: "white" }}>
-      <Button style={{ backgroundColor: "white", borderColor: "white" }}>
+    <div className="card" style={{ borderColor: "white", marginLeft: "20%" }}>
+      <Button
+        style={{
+          backgroundColor: "white",
+          borderColor: "white",
+        }}
+      >
         <div
           className="card-header"
           style={{

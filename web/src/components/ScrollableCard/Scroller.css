@@ -6,12 +6,19 @@
     border-color:"white"
     /* width: 30vh; */
   }
+  .container2 {
+    display: flex;
+    flex-direction: row;
+    height: 40vh;
+    border-color:"#e4e0ee"
+    /* width: 30vh; */
+  }
   
  
   
   .center-col {
     flex: 1;
-    background: #aaa;
+    background: #e4e0ee;
     overflow-y: scroll;
   }
   
@@ -19,16 +26,16 @@
 
 /* Define styles in a CSS file */
 .card {
-  border: 1px solid #ccc;
+ 
   border-radius: 5px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  margin: 20px;
+  width: 250px;
+  margin: 15px;
   padding: 20px;
 }
 
 .card-header {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
 }
 

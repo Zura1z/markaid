@@ -41,12 +41,13 @@ class CourseViewSet(viewsets.ModelViewSet):
         serializer = CourseSerializer(course)
         return Response(serializer.data)
     
-    @action(methods=['get'], detail=False)
+    @action(methods=['post'], detail=False)
     def list_by_teacher(self, request, *args, **kwargs):
-        teacher_id = request.query_params.get('teacher_id', None)
+        teacher_id = int(request.data['teacher_id'])
         if teacher_id:
             courses = self.get_queryset().filter(teacher=teacher_id)
             serializer = self.get_serializer(courses, many=True)
+            print(serializer.data)
             return Response(serializer.data)
         else:
             return Response({"error": "Teacher id is required."}, status=status.HTTP_400_BAD_REQUEST)

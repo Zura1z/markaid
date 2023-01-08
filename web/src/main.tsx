@@ -8,12 +8,10 @@ import CreateQuizPage from "./pages/CreateQuiz";
 import TeacherCourses from "./pages/TeacherCourses";
 import TeacherAssessments from "./pages/TeacherAssessments";
 
-import Sidebar from "./components/Sidebar/nsb";
-
 const Main = () => {
   return (
     <Routes>
-      <Route path="/" element={<Sidebar />} />
+      <Route path="/" element={<CreateExamPage />} />
       <Route path="/exam/create" element={<CreateExamPage />} />
       <Route path="/grade/essay" element={<EssayGradingPage />} />
       <Route path="/agent/qa" element={<QuestionAnswerPage />} />

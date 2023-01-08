@@ -17,8 +17,6 @@ import { getCoursesByTeacher } from "../api/apiClient";
 
 import Layout from "../components/Layout";
 
-import Section from "../components/common/Section";
-
 interface Course {
   id: number;
   title: string;

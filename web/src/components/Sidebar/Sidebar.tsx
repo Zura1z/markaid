@@ -12,9 +12,8 @@ export function SideBar() {
     setSideBar((prevState) => !prevState);
   }
   return (
-    <Container style={{ backgroundColor: "#b6acd1" }}>
+    <Container style={{ backgroundColor: "" }}>
       <Content>
-
         <OpenSideBar
           style={{ backgroundColor: "#836eaa", borderRadius: "13px" }}
         >

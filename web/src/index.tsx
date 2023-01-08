@@ -9,10 +9,10 @@ ReactDOM.render(
   <>
     <React.StrictMode>
       <BrowserRouter>
-        <SideBar />
+        {/* <SideBar /> */}
         <Main />
       </BrowserRouter>
-      </React.StrictMode>
+    </React.StrictMode>
   </>,
   document.getElementById("root")
 );

@@ -41,9 +41,7 @@ function EssayGrading() {
       <Form
       
         style={{
-          
           width:"800px",
-        
           borderRadius: "13px",
         }}
       >

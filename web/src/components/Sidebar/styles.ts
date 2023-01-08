@@ -88,7 +88,7 @@ export const OpenSideBar = styled.header`
 			}
 
 			div {
-				margin-top: 16px;
+				
 
 				display: flex;
 				align-items: center;

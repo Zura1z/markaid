@@ -56,11 +56,10 @@ function QuestionAnswer() {
 
   return (
     <>
-      <StudentSidebar />
-      <div style={{ padding: "40px", marginLeft: "18%" }}>
+      <div style={{ padding: "40px", marginLeft: "35%" }}>
         <h1 style={{ color: "#4e2a84" }}>Intelligent Q&A Agent</h1>
       </div>
-      <div style={{ padding: "20px", marginLeft: "17%" }}>
+      <div style={{ padding: "40px" }}>
         <Form
           style={{
             padding: "40px",
@@ -77,7 +76,7 @@ function QuestionAnswer() {
             <Form.Control
               as="textarea"
               placeholder="Context"
-              rows={3}
+              rows={6}
               id="context"
               value={contextState}
               onChange={onContextChangeHandler}
@@ -100,7 +99,7 @@ function QuestionAnswer() {
           <Button
             variant="outline-secondary"
             style={{
-              marginLeft: "700px",
+              marginLeft: "45%",
               backgroundColor: "#4e2a84",
               color: "white",
             }}

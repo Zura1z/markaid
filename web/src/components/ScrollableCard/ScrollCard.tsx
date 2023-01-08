@@ -23,6 +23,43 @@ const SCard = styled(Card)`
 
 export function ScrollCard(props: Course) {
   return (
+    <SCard style={{ width: "35rem", backgroundColor: "#836eaa" }}>
+      <Card.Body>
+        <Card.Title
+          style={{
+            color: "black",
+            textAlign: "center",
+            fontWeight: "bold",
+          }}
+        >
+          {props.title}
+        </Card.Title>
+        <div className="container1">
+          <Card.Text
+            className="center-col"
+            style={{
+              backgroundColor: "white",
+              // borderRadius: "13px",
+              padding: "20px",
+              borderColor: "white",
+            }}
+          >
+            <CourseInfo
+              title="Assignments"
+              studentCount={200}
+              assignmentCount={10}
+              quizCount={5}
+              footer=""
+            />
+          </Card.Text>
+        </div>
+      </Card.Body>
+    </SCard>
+  );
+}
+
+function ScrollCard1(props: Course) {
+  return (
     <>
       <GridLayout
         className="layout"

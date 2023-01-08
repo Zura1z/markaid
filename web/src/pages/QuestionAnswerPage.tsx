@@ -1,9 +1,13 @@
 import QuestionAnswer from "../components/QuestionAnswer/QuestionAnswer";
 
+import Layout from "../components/Layout";
+
 function QuestionAnswerPage() {
   return (
     <>
-      <QuestionAnswer />
+      <Layout>
+        <QuestionAnswer />
+      </Layout>
     </>
   );
 }

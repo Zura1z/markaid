@@ -1,7 +1,3 @@
-import React, { useState, useEffect } from "react";
-
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "/node_modules/react-grid-layout/css/styles.css";
 import "/node_modules/react-resizable/css/styles.css";
@@ -36,7 +32,6 @@ interface Course {
 }
 
 function TeacherCourses(props: IdProp) {
-  const [CoursesNo, setCoursesNo] = useState(0);
   const [resdata, setResdata] = useState<Course[]>([]);
 
   const getCourses = (id: number) => {
@@ -47,8 +42,6 @@ function TeacherCourses(props: IdProp) {
       try {
         const res = await getCoursesByTeacher(1);
         setResdata(res);
-        setCoursesNo(resdata.length);
-
         console.log(data);
         return res;
       } catch (e) {
@@ -62,8 +55,7 @@ function TeacherCourses(props: IdProp) {
 
   useEffect(() => {
     async function fetchData() {
-      const courses = await getCourses(1);
-      // setCoursesNo(courses);
+      await getCourses(1);
     }
     fetchData();
   }, []);

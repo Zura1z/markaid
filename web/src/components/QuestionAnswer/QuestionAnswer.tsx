@@ -5,7 +5,7 @@ import "/node_modules/react-resizable/css/styles.css";
 import Button from "react-bootstrap/Button";
 import * as Icon from "react-bootstrap-icons";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import { makeQARequest } from "../../api/apiClient";
 
@@ -61,10 +61,10 @@ function QuestionAnswer() {
           Back
         </Button>
       </div>
-      <div style={{ padding: "40px",marginLeft:"18%" }}>
+      <div style={{ padding: "40px", marginLeft: "18%" }}>
         <h1 style={{ color: "#4e2a84" }}>Intelligent Q&A Agent</h1>
       </div>
-      <div style={{ padding: "20px" ,marginLeft:"17%"}}>
+      <div style={{ padding: "20px", marginLeft: "17%" }}>
         <Form
           style={{
             padding: "40px",
@@ -77,7 +77,7 @@ function QuestionAnswer() {
             controlId="exampleForm.ControlTextarea1"
             style={{ color: "white" }}
           >
-            <Form.Label style={{color:"#4e2a84"}}>Context</Form.Label>
+            <Form.Label style={{ color: "#4e2a84" }}>Context</Form.Label>
             <Form.Control
               as="textarea"
               placeholder="Context"
@@ -92,7 +92,7 @@ function QuestionAnswer() {
             controlId="exampleForm.ControlInput1"
             style={{ color: "#4e2a84" }}
           >
-            <Form.Label style={{color:"#4e2a84"}}>Question</Form.Label>
+            <Form.Label style={{ color: "#4e2a84" }}>Question</Form.Label>
             <Form.Control
               type="question"
               placeholder="Question"
@@ -117,7 +117,7 @@ function QuestionAnswer() {
             controlId="exampleForm.ControlInput1"
             style={{ color: "#4e2a84" }}
           >
-            <Form.Label style={{color:"#4e2a84"}}>Answer</Form.Label>
+            <Form.Label style={{ color: "#4e2a84" }}>Answer</Form.Label>
             <Form.Control type="answer" placeholder={answer}></Form.Control>
           </Form.Group>
         </Form>

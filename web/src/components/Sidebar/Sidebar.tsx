@@ -63,7 +63,7 @@ export function SideBar() {
                       Assignments
                     </p>
                   </a>
-                  <a href="/" title="Alguma coisa">
+                  <a href="/agent/qa" title="Alguma coisa">
                     <Icon.ChatFill style={{ color: "white" }} />
                     <p
                       style={{

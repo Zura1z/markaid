@@ -9,6 +9,7 @@ import React, { useState } from "react";
 
 import { makeQARequest } from "../../api/apiClient";
 
+import { StudentSidebar } from "../Sidebar/StudentSidebar";
 function QuestionAnswer() {
   const [answer, setAnswer] = useState(null);
 
@@ -55,12 +56,7 @@ function QuestionAnswer() {
 
   return (
     <>
-      <div style={{ marginLeft: "17%", marginTop: "50px", color: "#4e2a84" }}>
-        <Button variant="outline-secondary" style={{ color: "#4e2a84" }}>
-          <Icon.ArrowLeft size={"20"} />
-          Back
-        </Button>
-      </div>
+      <StudentSidebar />
       <div style={{ padding: "40px", marginLeft: "18%" }}>
         <h1 style={{ color: "#4e2a84" }}>Intelligent Q&A Agent</h1>
       </div>

@@ -15,7 +15,7 @@ import { IdProp } from "../types";
 
 import { getCoursesByTeacher } from "../api/apiClient";
 
-import { SideBar } from "../components/Sidebar/Sidebar";
+import { StudentSidebar } from "../components/Sidebar/StudentSidebar";
 
 interface Course {
   id: number;
@@ -70,7 +70,7 @@ function TeacherCourses(props: IdProp) {
     <>
       <Row>
         <Col xs={2}>
-          <SideBar />
+          <StudentSidebar />
         </Col>
         <Col xs={10}>
           <div style={{ marginLeft: "35%", marginTop: "50px" }}>

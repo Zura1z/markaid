@@ -1,12 +1,6 @@
 import { ScrollCard } from "../ScrollableCard/ScrollCard";
 
-
-
 function AssesmentsUI() {
-  return (
-    <>
-      <ScrollCard/>
-    </>
-  );
+  return <>{/* <ScrollCard/> */}</>;
 }
 export default AssesmentsUI;

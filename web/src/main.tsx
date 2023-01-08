@@ -5,7 +5,7 @@ import EssayGradingPage from "./pages/EssayGradingPage";
 import QuestionAnswerPage from "./pages/QuestionAnswerPage";
 import StudentTablePage from "./pages/StudentTablePage";
 import CreateQuizPage from "./pages/CreateQuiz";
-import TeacherClassroom from "./pages/TeacherCourses";
+import TeacherCourses from "./pages/TeacherCourses";
 import TeacherAssessments from "./pages/TeacherAssessments";
 
 const Main = () => {
@@ -17,7 +17,7 @@ const Main = () => {
       <Route path="/agent/qa" element={<QuestionAnswerPage />} />
       <Route path="/student/info" element={<StudentTablePage />} />
       <Route path="/agent/generate" element={<CreateQuizPage />} />
-      <Route path="/teacher/courses" element={<TeacherClassroom id={1} />} />
+      <Route path="/teacher/courses" element={<TeacherCourses id={1} />} />
       <Route
         path="/teacher/assignments"
         element={<TeacherAssessments id={1} />}

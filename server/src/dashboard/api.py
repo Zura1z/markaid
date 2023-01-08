@@ -34,6 +34,18 @@ class CourseViewSet(viewsets.ModelViewSet):
         serializer = self.get_serializer(courses, many=True)
         return Response(serializer.data)
 
+    @action(methods=['post'], detail=True)
+    def create(self, request):
+        # Get the teacher and student objects
+        teacher = User.objects.get(pk=request.data['teacher'])
+
+        # Create a new Course object with the teacher and students
+        course = Course(title=request.data['title'], description=request.data['description'], teacher=teacher)
+        course.save()
+
+        serializer = CourseSerializer(course)
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+    
     @action(methods=['get'], detail=True)
     def get_course(self, request, *args, **kwargs):
         course_id = kwargs['pk']
@@ -61,9 +73,10 @@ class CourseViewSet(viewsets.ModelViewSet):
             return Response(serializer.data)
         else:
             return Response({"error": "Student id is required."}, status=status.HTTP_400_BAD_REQUEST)
-
+    @action(methods=['delete'], detail=False)
     def destroy(self, request, *args, **kwargs):
-        course = self.get_object()
+        course = self.get_queryset().filter(id=kwargs['pk'])
+        # course = self.get_object()
         course.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 

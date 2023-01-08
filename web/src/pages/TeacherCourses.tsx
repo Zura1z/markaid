@@ -1,5 +1,4 @@
-import { useState, useEffect } from "react";
-
+import { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "/node_modules/react-grid-layout/css/styles.css";
 import "/node_modules/react-resizable/css/styles.css";
@@ -44,7 +43,6 @@ function TeacherCourses(props: IdProp) {
       try {
         const res = await getCoursesByTeacher(1);
         setResdata(res);
-
         console.log(data);
         return res;
       } catch (e) {
@@ -111,6 +109,7 @@ function TeacherCourses(props: IdProp) {
           return (
             <div key={id} style={{ padding: "20px" }}>
               <TeacherCourseCard
+                id={id}
                 title={title}
                 description={description}
                 teacher={teacher.id}

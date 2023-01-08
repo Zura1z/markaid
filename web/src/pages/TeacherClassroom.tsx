@@ -116,6 +116,7 @@ function TeacherClassroom(props: IdProp) {
           return (
             <div key={id} style={{ padding: "20px" }}>
               <TeacherCourseCard
+                id={id}
                 title={title}
                 description={description}
                 teacher={teacher.id}

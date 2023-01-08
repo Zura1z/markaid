@@ -10,7 +10,7 @@ import TeacherClassroom from "./pages/TeacherClassroom";
 import ExamDetails from "./components/CreateExam/ExamsDetails";
 import Footer from "./components/Footer/Footer";
 
-// import { SideBar } from "./components/Sidebar/Sidebar";
+import { SideBar } from "./components/Sidebar/Sidebar";
 import QuestionAnswer from "./components/QuestionAnswer/QuestionAnswer";
 ReactDOM.render(
   <>
@@ -20,12 +20,12 @@ ReactDOM.render(
         <SideBar />
       </BrowserRouter>
     </React.StrictMode> */}
-    {/* <SideBar /> */}
+    <SideBar />
     {/* <AssesmentsUI/> */}
     {/* <AssesmentsUI/> */}
     {/* <Assesment/> */}
-    {/* <Footer /> */}
-    <TeacherClassroom id={1} />,{/* <QuestionAnswer /> */}
+    <TeacherClassroom id={1} />
+    <Footer />
   </>,
   document.getElementById("root")
 );

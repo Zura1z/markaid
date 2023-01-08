@@ -1,19 +1,65 @@
-import React, { useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import Modal from 'react-bootstrap/Modal';
+import React, { useState } from "react";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+import Modal from "react-bootstrap/Modal";
 import * as Icon from "react-bootstrap-icons";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+
+import { createCourse } from "../../api/apiClient";
+
 function AddClassroomButton() {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  const [id, setId] = useState(null);
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [teacher, setTeacher] = useState(null);
+
+  const onTeacherChangeHandler = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    setTeacher(event.target.value);
+  };
+
+  const onTitleChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setTitle(event.target.value);
+  };
+
+  const onDescriptionChangeHandler = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    setDescription(event.target.value);
+  };
+
+  async function handleCreateCourse(event: React.FormEvent) {
+    event.preventDefault();
+    const data = {
+      id: id,
+      title: title,
+      description: description,
+      teacher: teacher,
+      students: [11],
+    };
+    const result = await createCourse(data);
+    setShow(false);
+    window.location.reload();
+    // handle success/failure of course creation
+  }
+
   return (
     <>
-      <Button onClick={handleShow} style={{backgroundColor:"#880e4f",width:"15rem",borderColor:"white" }}>
-      <Icon.PlusLg size={"20"}></Icon.PlusLg>
+      <Button
+        onClick={handleShow}
+        style={{
+          backgroundColor: "#880e4f",
+          width: "15rem",
+          borderColor: "white",
+        }}
+      >
+        <Icon.PlusLg size={"20"}></Icon.PlusLg>
         Add Classroom
       </Button>
 
@@ -29,6 +75,7 @@ function AddClassroomButton() {
                 type="TeacherID"
                 placeholder="00"
                 autoFocus
+                onChange={onTeacherChangeHandler}
               />
             </Form.Group>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
@@ -37,15 +84,20 @@ function AddClassroomButton() {
                 type="Classroom"
                 placeholder="e.g Object Oriented Programing"
                 autoFocus
+                onChange={onTitleChangeHandler}
               />
             </Form.Group>
-            
+
             <Form.Group
               className="mb-3"
               controlId="exampleForm.ControlTextarea1"
             >
               <Form.Label>Description</Form.Label>
-              <Form.Control as="textarea" rows={3} />
+              <Form.Control
+                as="textarea"
+                rows={3}
+                onChange={onDescriptionChangeHandler}
+              />
             </Form.Group>
           </Form>
         </Modal.Body>
@@ -53,8 +105,11 @@ function AddClassroomButton() {
           <Button variant="secondary" onClick={handleClose}>
             Cancel
           </Button>
-          <Button style={{backgroundColor:"#4e2a84"}} onClick={handleClose}>
-           Add
+          <Button
+            style={{ backgroundColor: "#4e2a84" }}
+            onClick={handleCreateCourse}
+          >
+            Add
           </Button>
         </Modal.Footer>
       </Modal>

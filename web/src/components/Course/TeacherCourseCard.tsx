@@ -1,3 +1,5 @@
+import React, { useState } from "react";
+
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -8,7 +10,13 @@ import Addstudent from "./Addstudent";
 
 import { Course } from "../../types";
 
+import { deleteCourse } from "../../api/apiClient";
+
 function TeacherCourseCard(props: Course) {
+  const onClickHandler = () => {
+    deleteCourse(props.id);
+    window.location.reload();
+  };
   return (
     <>
       <Card style={{ width: "25rem" }}>
@@ -17,7 +25,10 @@ function TeacherCourseCard(props: Course) {
           <Card.Text>{props.description}</Card.Text>
           <Addstudent />
           {"   "}
-          <Button style={{ backgroundColor: "#b71c1c", borderColor: "white" }}>
+          <Button
+            onClick={onClickHandler}
+            style={{ backgroundColor: "#b71c1c", borderColor: "white" }}
+          >
             <Icon.XLg size={"20"} />
           </Button>
           {"   "}

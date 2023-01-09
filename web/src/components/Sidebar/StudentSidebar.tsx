@@ -6,12 +6,15 @@ import { Container, Content,OpenSideBar } from "./styles";
 
 import * as Icon from "react-bootstrap-icons";
 // import { faLongArrowAltLeft } from "@fortawesome/free-solid-svg-icons";
-export function TeacherSideBar() {
+export function StudentSideBar() {
+    const hello = 'Hello, ';
+    const world = 'World!';
   const [sideBar, setSideBar] = useState(false);
   function handleChangeSideBar() {
     setSideBar((prevState) => !prevState);
   }
   return (
+    
     <Container style={{ backgroundColor: "#b6acd1" }}>
       <Content>
        
@@ -52,21 +55,8 @@ export function TeacherSideBar() {
                         Assignment
                       </p>
                     </a>
-                    <a href="/exams/examhistory" title="Alguma coisa">
-                      <Icon.ChatFill style={{ color: "white" }} />
-                      <p
-                        style={{
-                          fontSize: "20px",
-                          color: "white",
-                          fontFamily: "cursive",
-                          borderColor:"white"
-                        }}
-                      >
-                        
-                        Exams
-                      </p>
-                    </a>
-                    {/* <a href="/" title="Alguma coisa">
+                    
+                    <a href="/" title="Alguma coisa">
                       <Icon.CardChecklist style={{ color: "white" }} />
                       <p
                         style={{
@@ -75,9 +65,9 @@ export function TeacherSideBar() {
                           fontFamily: "cursive",
                         }}
                       >
-                        
+                        Q&Ans
                       </p>
-                    </a> */}
+                    </a>
                     <a href="/" title="Alguma coisa">
                       <Icon.Flag style={{ color: "white" }} />
                       <p

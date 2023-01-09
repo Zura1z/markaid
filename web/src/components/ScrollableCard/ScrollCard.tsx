@@ -11,9 +11,9 @@ const layout = [
 ];
 const SCard = styled(Card)`
   background: white !important;
-  border-radius: 0px !important;
+  
   margin-left: 20% !important;
-  border-color: #222;
+  border-color: white;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 `;
@@ -123,8 +123,8 @@ export function ScrollCard() {
 export function CourseInfo(props: CourseCardProps) {
   return (
     <div className="card" style={{borderColor:"white"}}>
-      <Button variant="outline-light" style={{backgroundColor:"white",borderColor:"white"}}>
-      <div className="card-header" style={{ color: "#836eaa" ,backgroundColor:"white"}}>
+      <Button  style={{backgroundColor:"white",borderColor:"white"}}>
+      <div className="card-header" style={{ color: "#836eaa" ,backgroundColor:"white",textAlign:"center",borderColor:"white"}}>
         {props.title}
       </div>
       </Button>

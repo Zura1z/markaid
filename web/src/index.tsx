@@ -12,6 +12,10 @@ import Footer from "./components/Footer/Footer";
 
 // import { SideBar } from "./components/Sidebar/Sidebar";
 import QuestionAnswer from "./components/QuestionAnswer/QuestionAnswer";
+import { ScrollCard } from "./components/ScrollableCard/ScrollCard";
+import { TeacherSideBar } from "./components/Sidebar/TeacherSideBar";
+import EssayGrading from "./components/EssayGrading/EssayGrading";
+import CreateExam from "./components/CreateExam/CreateExam";
 ReactDOM.render(
   <>
     {/* <React.StrictMode>
@@ -25,7 +29,9 @@ ReactDOM.render(
     {/* <AssesmentsUI/> */}
     {/* <Assesment/> */}
     {/* <Footer /> */}
-    <TeacherClassroom id={1} />,{/* <QuestionAnswer /> */}
+    <TeacherSideBar/>
+    <CreateExam/>
+    {/* <TeacherClassroom id={1} />,<QuestionAnswer /> */}
   </>,
   document.getElementById("root")
 );

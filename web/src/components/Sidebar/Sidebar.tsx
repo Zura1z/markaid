@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { Container, Content, ClosedSideBar, OpenSideBar } from "./styles";
+import { Container, Content, OpenSideBar } from "./styles";
 
 // import { BsLockFill } from "react-icons/bs";
 
@@ -15,7 +15,7 @@ export function SideBar() {
     <Container style={{ backgroundColor: "#b6acd1" }}>
       <Content>
        
-          <OpenSideBar style={{ backgroundColor: "#836eaa" ,borderRadius:"13px"}}>
+          <OpenSideBar style={{ backgroundColor: "#836eaa" ,borderRadius:"13px",borderColor:"white"}}>
             <section>
               <nav>
                 <span>
@@ -35,6 +35,7 @@ export function SideBar() {
                           fontSize: "20px",
                           color: "white",
                           fontFamily: "cursive",
+                          borderColor:"white"
                         }}
                       >
                         Assignment

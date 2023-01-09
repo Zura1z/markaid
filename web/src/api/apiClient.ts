@@ -57,6 +57,7 @@ async function makeGradingRequest(data: GradingRequestData) {
       console.error(error);
     }
 
+      data
 async function getQuizzesByCourse(id: number) {
   try {
     const response = await axios.post(

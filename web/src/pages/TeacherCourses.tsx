@@ -7,7 +7,7 @@ import Row from "react-bootstrap/esm/Row";
 import GridLayout from "react-grid-layout";
 import Container from "react-bootstrap/Container";
 
-import AddClassroomButton from "../components/Course/AddClassroomForm";
+import AddCourseButton from "../components/Course/AddCourseForm";
 
 import TeacherCourseCard from "../components/Course/TeacherCourseCard";
 
@@ -80,7 +80,7 @@ function TeacherCourses(props: IdProp) {
             borderColor: "white",
           }}
         >
-          <AddClassroomButton />
+          <AddCourseButton />
         </div>
 
         <Row>

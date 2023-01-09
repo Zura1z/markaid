@@ -47,4 +47,24 @@ async function deleteCourse(id: number) {
   }
 }
 
-export { makeQARequest, getCoursesByTeacher, createCourse, deleteCourse };
+async function getQuizzesByCourse(id: number) {
+  try {
+    const response = await axios.post(
+      dashboardLink + "view/quiz/list_by_course/",
+      {
+        course_id: id,
+      }
+    );
+    return response.data;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+export {
+  makeQARequest,
+  getCoursesByTeacher,
+  createCourse,
+  deleteCourse,
+  getQuizzesByCourse,
+};

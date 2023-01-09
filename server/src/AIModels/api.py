@@ -28,3 +28,22 @@ class call_model(APIView):
             print(response)
             # returning JSON response
             return JsonResponse(response)
+        
+class call_model2(APIView):
+    
+    def post(self,request, format=None):
+        # print(request.data)
+        model_data = request.data
+        print(model_data)
+        
+        if request.method == 'POST':
+            
+            # sentence is the query we want to get the prediction for
+            answer =  model_data['answer']
+            marking_scheme =  model_data['marking_scheme']
+            
+            # predict method used to get the prediction
+            response = AimodelsConfig.predictAES(answer=answer,marking_scheme=marking_scheme)
+            print(response)
+            # returning JSON response
+            return JsonResponse(response)

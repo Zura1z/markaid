@@ -22,5 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/dashboard/', include('dashboard.urls', namespace='dashboard')),
     # path('api/', include('AIModels.urls', namespace='AIModels')),
-    path('api/model/', api.call_model.as_view())
+    path('api/model/', api.call_model.as_view()),
+    path('api/model2/', api.call_model2.as_view())
 ]

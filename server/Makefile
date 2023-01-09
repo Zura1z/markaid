@@ -19,6 +19,8 @@ superuser:
 migrate: 
 	python src/manage.py makemigrations
 	python src/manage.py makemigrations dashboard
+	python src/manage.py makemigrations AIModels
+
 	python src/manage.py migrate 
 	$(MAKE) loadfixtures
 

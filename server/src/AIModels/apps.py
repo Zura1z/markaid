@@ -121,13 +121,54 @@ class AimodelsConfig(AppConfig):
             model.summary()
 
             return model
+        def getPredictions(marking_scheme, answer, min_marks, max_marks):
+            """Get Prediction from the model given a Question and an Answer"""
+        
+            num_features = 300
+            if (len(answer) > 20):
+                model = word2vec.KeyedVectors.load_word2vec_format("word2vecmodel.bin", binary=True)
+                
+                clean_test_essays = []
+                clean_test_ms = []
+                
+                clean_test_essays.append(essay_to_wordlist(answer, remove_stopwords=True ))
+                clean_test_ms.append(essay_to_wordlist(marking_scheme, remove_stopwords=True ))
+                
+                testDataVecs = getAvgFeatureVecs(clean_test_essays, model, num_features )
+                
+                
+                testDataVecs2=np.ones(testDataVecs.shape)
+                testDataVecs2 = getAvgFeatureVecs(clean_test_ms, model, num_features )
+                testDataVecs+=testDataVecs2
+                
+                testDataVecs = np.array(testDataVecs)
+                testDataVecs = np.reshape(testDataVecs, (testDataVecs.shape[0], 1, testDataVecs.shape[1]))
+
+                lstm_model = load_model('lstm_ques_ms_2folds.h5')
+                preds = lstm_model.predict(testDataVecs)
+
+                if math.isnan(preds):
+                    preds = 0
+                else:
+                    preds = np.around(preds)
+
+                if preds < 0:
+                    preds = 0
+                
+                if preds > max_marks:
+                    preds = max_marks
+                if preds < min_marks:
+                    preds = min_marks
+            else:
+                preds = 0
+            
+            return preds
         model = get_model()
         model.load_weights('./src/AIModels/models/AES/lstm_ques_ms.h5')        
-        if request.method == 'POST':
-            marking_scheme = request.POST['marking_scheme']
-            answer = request.POST['answer']
-            min_marks = int(request.POST['min_marks'])
-            max_marks = int(request.POST['max_marks'])
+        marking_scheme = marking_scheme
+        answer = answer
+        min_marks = 0
+        max_marks = 100
 
         
         print(answer)

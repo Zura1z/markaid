@@ -1,7 +1,4 @@
-import React, { useState, useEffect } from "react";
-
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
+import { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "/node_modules/react-grid-layout/css/styles.css";
 import "/node_modules/react-resizable/css/styles.css";
@@ -35,8 +32,7 @@ interface Course {
   }[];
 }
 
-function TeacherClassroom(props: IdProp) {
-  const [CoursesNo, setCoursesNo] = useState(0);
+function TeacherCourses(props: IdProp) {
   const [resdata, setResdata] = useState<Course[]>([]);
 
   const getCourses = (id: number) => {
@@ -47,8 +43,6 @@ function TeacherClassroom(props: IdProp) {
       try {
         const res = await getCoursesByTeacher(1);
         setResdata(res);
-        setCoursesNo(resdata.length);
-
         console.log(data);
         return res;
       } catch (e) {
@@ -62,8 +56,7 @@ function TeacherClassroom(props: IdProp) {
 
   useEffect(() => {
     async function fetchData() {
-      const courses = await getCourses(1);
-      // setCoursesNo(courses);
+      await getCourses(1);
     }
     fetchData();
   }, []);
@@ -116,6 +109,7 @@ function TeacherClassroom(props: IdProp) {
           return (
             <div key={id} style={{ padding: "20px" }}>
               <TeacherCourseCard
+                id={id}
                 title={title}
                 description={description}
                 teacher={teacher.id}
@@ -158,4 +152,4 @@ function TeacherClassroom(props: IdProp) {
   );
 }
 
-export default TeacherClassroom;
+export default TeacherCourses;

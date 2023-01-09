@@ -14,6 +14,8 @@ urlpatterns = [
     path('view/users/<int:pk>/get_user/', api.UserViewSet.as_view({'get': 'get_user'})),
 
     # Courses
+    path('create/course/',  api.CourseViewSet.as_view({'post': 'create'}), name='create'),
+    path('delete/course/<int:pk>/', api.CourseViewSet.as_view({'delete': 'destroy'}), name='course-delete'),
     path('view/course/', api.CourseViewSet.as_view({'get': 'list'}), name='course'),
     path('view/course/<int:pk>/get_course/', api.CourseViewSet.as_view({'get': 'get_course'})),
     path('view/course/list_by_teacher/', api.CourseViewSet.as_view({'post': 'list_by_teacher'})),

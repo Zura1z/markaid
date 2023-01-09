@@ -47,22 +47,8 @@ export function StudentScroller() {
               }}
             >
               <CourseInfo
+                id={1}
                 title="Student 1"
-                studentCount={200}
-                assignmentCount={10}
-                quizCount={5}
-                footer=""
-              />
-              <CourseInfo
-                title="Student 2"
-                studentCount={200}
-                assignmentCount={10}
-                quizCount={5}
-                footer=""
-              />
-
-              <CourseInfo
-                title="Student 3"
                 studentCount={200}
                 assignmentCount={10}
                 quizCount={5}

@@ -8,6 +8,7 @@ export type Course = {
 
 // Props
 export type CourseCardProps = {
+  id: number;
   title: string;
   studentCount: number;
   assignmentCount: number;

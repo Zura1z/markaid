@@ -9,6 +9,8 @@ import { IdProp, Course } from "../types";
 
 import { ScrollCard } from "../components/ScrollableCard/ScrollCard";
 
+import addAssessmentButton from "../components/Course/addAssessmentForm";
+
 import { getCoursesByTeacher } from "../api/apiClient";
 
 import Layout from "../components/Layout";
@@ -47,6 +49,16 @@ function TeacherAssessments(props: IdProp) {
         <div style={{ marginLeft: "35%", marginTop: "50px" }}>
           <h1>My Assessments</h1>
         </div>
+        <div
+          style={{
+            marginLeft: "80%",
+            backgroundColor: "#4e2a84",
+            width: "15rem",
+            borderColor: "white",
+          }}
+        >
+          {/* <addAssessmentButton /> */}
+        </div>
         <Row>
           {resdata.map((course, index) => {
             // custom typecast
@@ -67,7 +79,6 @@ function TeacherAssessments(props: IdProp) {
                   description={description}
                   teacher={teacher}
                   students={students.map((student, index) => student)}
-                  // students={[1, 2]}
                 />
               </Col>
             );

@@ -53,8 +53,8 @@
         "model": "dashboard.Course",        
         "pk": 6,        
         "fields": {            
-            "title": "Introduction to Python",            
-            "description": "Learn the fundamentals of Python programming.",            
+            "title": "Machine Learning",            
+            "description": "Learn the fundamentals of Machine learning and SOTA Models.",            
             "teacher": 1,              
             "students": [12, 13, 14] 
         }

@@ -4,6 +4,6 @@ export type QARequestData = {
 };
 
 export type GradingRequestData = {
-  ms: string;
-  question: string;
+  marking_scheme: string;
+  answer: string;
 };

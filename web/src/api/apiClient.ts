@@ -51,13 +51,14 @@ async function makeGradingRequest(data: GradingRequestData) {
   try {
     const response = await axios.post(
       "http://127.0.0.1:8000/api/model2/",
-      data);
-      return response.data;
-    } catch (error) {
-      console.error(error);
-    }
-
       data
+    );
+    return response.data;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
 async function getQuizzesByCourse(id: number) {
   try {
     const response = await axios.post(

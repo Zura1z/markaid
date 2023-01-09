@@ -1,0 +1,11 @@
+context:
+Imran Ahmed Khan Niazi HI(M) PP (Urdu: عمران احمد خان نیازی; born 5 October 1952) is a Pakistani politician and former Cricket captain who served as the 22nd Prime Minister of Pakistan from August 2018 to until April 2022, when he was ousted through a no-confidence in the National Assembly. He is the founder and chairman of Pakistan Tehreek-e-Insaf (PTI).
+
+Born to a Niazi Pashtun family in Lahore, Khan graduated from Keble College, University of Oxford, England, in 1975. He began his international cricket career at age 18, in a 1971 Test series against England. Khan played until 1992, served as the team's captain intermittently between 1982 and 1992,[6] and won the 1992 Cricket World Cup, in what is Pakistan's first and only victory in the competition. Considered one of cricket's greatest all-rounders,[7][8] Khan scored 3,807 runs and took 362 wickets in Test cricket and was inducted into the ICC Cricket Hall of Fame. Khan founded cancer hospitals in Lahore and Peshawar,[9] and Namal College in Mianwali,[10][11] prior to entering politics.[12][13] Founding the PTI in 1996, Khan won a seat in the National Assembly in the 2002 general election, serving as an opposition member from Mianwali until 2007. PTI boycotted the 2008 general election and became the second-largest party by popular vote in the 2013 general election.[14][15] In the 2018 general election, running on a populist platform, PTI became the largest party in the National Assembly, and formed a coalition government with independents with Khan as Prime Minister.
+
+
+q1 : From where did Imran Khan graduate?
+
+q2: When did Khan begin his cricket career?
+
+q3: When did PTI won its first seat?

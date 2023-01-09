@@ -7,12 +7,12 @@ import QuizQuestion from "./components/Quiz/QuizQuestion";
 import Main from "./main";
 ReactDOM.render(
   <>
-    {/* <React.StrictMode>
+    <React.StrictMode>
       <BrowserRouter>
         <Main />
       </BrowserRouter>
-    </React.StrictMode> */}
-    <QuizQuestion/>
+    </React.StrictMode>
+    {/* <QuizQuestion/> */}
   </>,
   document.getElementById("root")
 );

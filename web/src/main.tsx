@@ -13,7 +13,7 @@ const Main = () => {
     <Routes>
       <Route path="/" element={<CreateExamPage />} />
       <Route path="/exam/create" element={<CreateExamPage />} />
-      <Route path="/grade/essay" element={<EssayGradingPage />} />
+      <Route path="/teacher/grade" element={<EssayGradingPage />} />
       <Route path="/agent/qa" element={<QuestionAnswerPage />} />
       <Route path="/student/info" element={<StudentTablePage />} />
       <Route path="/agent/generate" element={<CreateQuizPage />} />

@@ -22,6 +22,8 @@ urlpatterns = [
     path('view/course/list_by_student/', api.CourseViewSet.as_view({'get': 'list_by_student'})),
     path('view/courses/<int:pk>/', api.CourseViewSet.as_view({'delete': 'destroy'}), name='course-delete'),
 
+    path('view/quiz/list_by_course/', api.QuizViewSet.as_view({'post': 'list_by_course'})),
+
     path('signup/', api.signup, name='signup'),
     path('login/', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(template_name='logout.html'), name='logout'),

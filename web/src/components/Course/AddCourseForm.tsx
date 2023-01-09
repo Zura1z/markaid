@@ -7,7 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import { createCourse } from "../../api/apiClient";
 
-function AddClassroomButton() {
+function AddCourseButton() {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -16,13 +16,7 @@ function AddClassroomButton() {
   const [id, setId] = useState(null);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  const [teacher, setTeacher] = useState(null);
-
-  const onTeacherChangeHandler = (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    setTeacher(event.target.value);
-  };
+  const [teacher, setTeacher] = useState(1);
 
   const onTitleChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     setTitle(event.target.value);
@@ -60,7 +54,7 @@ function AddClassroomButton() {
         }}
       >
         <Icon.PlusLg size={"20"}></Icon.PlusLg>
-        Add Classroom
+        Add Course
       </Button>
 
       <Modal show={show} onHide={handleClose}>
@@ -69,15 +63,6 @@ function AddClassroomButton() {
         </Modal.Header>
         <Modal.Body>
           <Form>
-            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>Teacher ID</Form.Label>
-              <Form.Control
-                type="TeacherID"
-                placeholder="00"
-                autoFocus
-                onChange={onTeacherChangeHandler}
-              />
-            </Form.Group>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
               <Form.Label>Classroom Name</Form.Label>
               <Form.Control
@@ -116,4 +101,4 @@ function AddClassroomButton() {
     </>
   );
 }
-export default AddClassroomButton;
+export default AddCourseButton;

@@ -51,7 +51,19 @@ async function makeGradingRequest(data: GradingRequestData) {
   try {
     const response = await axios.post(
       "http://127.0.0.1:8000/api/model2/",
-      data
+      data);
+      return response.data;
+    } catch (error) {
+      console.error(error);
+    }
+
+async function getQuizzesByCourse(id: number) {
+  try {
+    const response = await axios.post(
+      dashboardLink + "view/quiz/list_by_course/",
+      {
+        course_id: id,
+      }
     );
     return response.data;
   } catch (error) {
@@ -65,4 +77,5 @@ export {
   createCourse,
   deleteCourse,
   makeGradingRequest,
+  getQuizzesByCourse,
 };

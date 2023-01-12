@@ -37,10 +37,10 @@ function Quiz() {
           <Form.Control type="essay" style={{ height: "200px" }} />
         </Form.Group>
         <div style={{ marginLeft: "30%" }}>
-          <Button variant="outline-secondary">Genratere MCQ</Button>{" "}
-          <Button variant="outline-secondary">Genratere True/False</Button>{" "}
-          <Button variant="outline-secondary">Genratere FAQ</Button>{" "}
-          <Button variant="outline-secondary">Genratere Q/Ans</Button> <br />
+          <Button variant="outline-secondary">Generate MCQ</Button>{" "}
+          <Button variant="outline-secondary">Generate True/False</Button>{" "}
+          <Button variant="outline-secondary">Generate FAQ</Button>{" "}
+          <Button variant="outline-secondary">Generate Q/Ans</Button> <br />
           <br />
           <br />
           <br />
@@ -63,7 +63,7 @@ function Quiz() {
           className="fw-bold"
           style={{ color: "white", backgroundColor: "#4e2a84", width: "300px" }}
         >
-          Genrate Test
+          Generate Test
         </Button>
         <br />
         <br />

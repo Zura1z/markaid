@@ -104,6 +104,19 @@ const Sidebar: React.FC<Props> = () => {
               Assignments
             </div>
           </SLink>
+          <SLink
+            className="px-5 py-2"
+            onClick={(event) => navigateToNewPath("/teacher/grade")}
+          >
+            <div
+              style={{
+                color: "#401f68",
+                textDecorationColor: "#000",
+              }}
+            >
+              Grading
+            </div>
+          </SLink>
         </div>
       </SContainer>
     </>

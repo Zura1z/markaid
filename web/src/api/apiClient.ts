@@ -1,6 +1,6 @@
 import axios from "axios";
 
-import { QARequestData } from "./types";
+import { QARequestData, GradingRequestData } from "./types";
 
 import { Course } from "../types";
 
@@ -47,6 +47,18 @@ async function deleteCourse(id: number) {
   }
 }
 
+async function makeGradingRequest(data: GradingRequestData) {
+  try {
+    const response = await axios.post(
+      "http://127.0.0.1:8000/api/model2/",
+      data
+    );
+    return response.data;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
 async function getQuizzesByCourse(id: number) {
   try {
     const response = await axios.post(
@@ -66,5 +78,6 @@ export {
   getCoursesByTeacher,
   createCourse,
   deleteCourse,
+  makeGradingRequest,
   getQuizzesByCourse,
 };

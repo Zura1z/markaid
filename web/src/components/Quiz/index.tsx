@@ -6,24 +6,15 @@ import * as Icon from "react-bootstrap-icons";
 function Quiz() {
   return (
     <>
-      <div style={{ marginLeft: "17%", marginTop: "50px", color: "#4e2a84" }}>
-        <Button
-          variant="outline-secondary"
-          style={{ color: "white", backgroundColor: "#4e2a84" }}
-        >
-          <Icon.ArrowLeft size={"20"} />
-          Back
-        </Button>
-      </div>
       <div>
-        <h1 style={{ marginLeft: "18%", padding: "50px", color: "#4e2a84" }}>
-          Quiz Genration
+        <h1 style={{ marginLeft: "30%", padding: "50px", color: "#4e2a84" }}>
+          Quiz Generation
         </h1>
       </div>
       <Form
         style={{
-          marginLeft: "20%",
-          marginRight: "70px",
+          marginLeft: "0%",
+          marginRight: "100px",
           backgroundColor: "#e4e0ee",
           borderRadius: "13px",
         }}
@@ -36,13 +27,12 @@ function Quiz() {
           <Form.Label className="fw-bold">Input Context</Form.Label>
           <Form.Control type="essay" style={{ height: "200px" }} />
         </Form.Group>
+
         <div style={{ marginLeft: "30%" }}>
-          <Button variant="outline-secondary">Generate MCQ</Button>{" "}
-          <Button variant="outline-secondary">Generate True/False</Button>{" "}
-          <Button variant="outline-secondary">Generate FAQ</Button>{" "}
-          <Button variant="outline-secondary">Generate Q/Ans</Button> <br />
-          <br />
-          <br />
+          <h3>Generate</h3>
+          <Button variant="outline-secondary"> MCQs Questions</Button>{" "}
+          <Button variant="outline-secondary">True/False Questions</Button>{" "}
+          <Button variant="outline-secondary"> Short Questions</Button> <br />
           <br />
         </div>
 
@@ -52,7 +42,7 @@ function Quiz() {
           style={{
             color: "white",
             backgroundColor: "#700303",
-            marginLeft: "30%",
+            marginLeft: "25%",
             width: "300px",
           }}
         >

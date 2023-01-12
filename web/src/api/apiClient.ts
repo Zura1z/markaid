@@ -2,7 +2,7 @@ import axios from "axios";
 
 import { QARequestData } from "./types";
 
-import { Course } from "../types";
+import { Course, Quiz } from "../types";
 
 const dashboardLink = "http://127.0.0.1:8000/api/dashboard/";
 
@@ -61,10 +61,20 @@ async function getQuizzesByCourse(id: number) {
   }
 }
 
+async function createQuiz(data: Quiz) {
+  try {
+    const response = await axios.post(dashboardLink + "create/quiz/", data);
+    return response.data;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
 export {
   makeQARequest,
   getCoursesByTeacher,
   createCourse,
   deleteCourse,
   getQuizzesByCourse,
+  createQuiz,
 };

@@ -19,3 +19,8 @@ export type CourseCardProps = {
 export type IdProp = {
   id: number;
 };
+
+export type Quiz = {
+  title: string;
+  course: number;
+};

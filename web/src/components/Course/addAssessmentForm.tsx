@@ -5,9 +5,15 @@ import Modal from "react-bootstrap/Modal";
 import * as Icon from "react-bootstrap-icons";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import { createCourse } from "../../api/apiClient";
+import { createQuiz } from "../../api/apiClient";
 
-function addAssessmentButton() {
+import { Course } from "../../types";
+
+interface AddAssessmentButtonProps {
+  courses: Course[];
+}
+
+function AddAssessmentButton(props: AddAssessmentButtonProps) {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -15,35 +21,24 @@ function addAssessmentButton() {
 
   const [id, setId] = useState(1);
   const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
-  const [teacher, setTeacher] = useState(null);
-
-  const onTeacherChangeHandler = (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    setTeacher(event.target.value);
-  };
+  const [courseId, setCourseId] = useState(0);
 
   const onTitleChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     setTitle(event.target.value);
   };
 
-  const onDescriptionChangeHandler = (
-    event: React.ChangeEvent<HTMLInputElement>
+  const onCourseChangeHandler = (
+    event: React.ChangeEvent<HTMLSelectElement>
   ) => {
-    setDescription(event.target.value);
+    setCourseId(parseInt(event.target.value));
   };
 
-  async function handleCreateCourse(event: React.FormEvent) {
-    event.preventDefault();
+  async function handleCreateAssessment(event: React.FormEvent) {
     const data = {
-      id: id,
       title: title,
-      description: description,
-      teacher: teacher,
-      students: [11],
+      course: courseId,
     };
-    const result = await createCourse(data);
+    const result = await createQuiz(data);
     setShow(false);
     window.location.reload();
     // handle success/failure of course creation
@@ -70,25 +65,22 @@ function addAssessmentButton() {
         <Modal.Body>
           <Form>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>Classroom Name</Form.Label>
+              <Form.Label>Assessment Name</Form.Label>
               <Form.Control
                 type="Classroom"
-                placeholder="e.g Object Oriented Programing"
+                placeholder="e.g Object Oriented Programing Quiz"
                 autoFocus
                 onChange={onTitleChangeHandler}
               />
             </Form.Group>
 
-            <Form.Group
-              className="mb-3"
-              controlId="exampleForm.ControlTextarea1"
-            >
-              <Form.Label>Description</Form.Label>
-              <Form.Control
-                as="textarea"
-                rows={3}
-                onChange={onDescriptionChangeHandler}
-              />
+            <Form.Group className="mb-3">
+              <Form.Label>Select menu</Form.Label>
+              <Form.Select onChange={onCourseChangeHandler}>
+                {props.courses.map((course) => {
+                  return <option value={course.id}>{course.title}</option>;
+                })}
+              </Form.Select>
             </Form.Group>
           </Form>
         </Modal.Body>
@@ -96,9 +88,10 @@ function addAssessmentButton() {
           <Button variant="secondary" onClick={handleClose}>
             Cancel
           </Button>
+
           <Button
             style={{ backgroundColor: "#4e2a84" }}
-            onClick={handleCreateCourse}
+            onClick={handleCreateAssessment}
           >
             Add
           </Button>
@@ -107,4 +100,4 @@ function addAssessmentButton() {
     </>
   );
 }
-export default addAssessmentButton;
+export default AddAssessmentButton;

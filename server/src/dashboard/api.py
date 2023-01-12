@@ -97,6 +97,14 @@ class QuizViewSet(viewsets.ModelViewSet):
         else:
             return Response({"error": "Course id is required."}, status=status.HTTP_400_BAD_REQUEST)
 
+    @action(methods=['post'], detail=True)
+    def create(self, request, *args, **kwargs):
+        serializer = QuizSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
 class QuestionViewSet(viewsets.ModelViewSet):
     queryset = Question.objects.all()
     serializer_class = QuestionSerializer

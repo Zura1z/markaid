@@ -9,7 +9,7 @@ import { IdProp, Course } from "../types";
 
 import { ScrollCard } from "../components/ScrollableCard/ScrollCard";
 
-import addAssessmentButton from "../components/Course/addAssessmentForm";
+import AddAssessmentButton from "../components/Course/AddAssessmentForm";
 
 import { getCoursesByTeacher } from "../api/apiClient";
 
@@ -57,7 +57,7 @@ function TeacherAssessments(props: IdProp) {
             borderColor: "white",
           }}
         >
-          {/* <addAssessmentButton /> */}
+          <AddAssessmentButton courses={resdata} />
         </div>
         <Row>
           {resdata.map((course, index) => {
